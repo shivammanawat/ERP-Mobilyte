@@ -100,8 +100,8 @@ router.post('/register', (req, res, next) => {
   let transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS
+      user: 'shivammanawat2526@gmail.com',
+      pass: 'Avani@1997'
     },
     tls: {
       rejectUnauthorized: false
@@ -220,8 +220,8 @@ router.post('/forgotpassword', (req, res) => {
         let transporter = nodemailer.createTransport({
           service: 'Gmail',
           auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_PASS
+            user: 'shivammanawat2526@gmail.com',
+            pass: 'Avani@1997'
           },
           tls: {
             rejectUnauthorized: false
@@ -378,66 +378,66 @@ router.get('/find/:_id', function (req, res) {
 });
 
 
-var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
-  // used to serialize the user for the session
-  passport.serializeUser(function (user, done) {
-    console.log("in serializeUser user");
-    done(null, user.id);
-  });
-  // used to deserialize the user
-  passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-      console.log("In deserialize user");
-        done(err, user);
-    });
-  });
-passport.use(new GoogleStrategy({
-    clientID:  '253236158197-v3t0oaav0op4fsq2qorqhv8jmaj1ante.apps.googleusercontent.com'  ,
-    clientSecret: 'Dzz4NAKNVW5W7fWux4BPvRbQ',
-    callbackURL: "http://localhost:8080/user/auth/google/callback",
-    passReqToCallback   : true
-  },
-  function(request, accessToken, refreshToken, profile, done) { 
-    // console.log(profile);
-    console.log(profile.id);
-    God.findOne({
-      googleId: profile.id,
-    }, function (err, user) {
-      //No user was found... so create a new user with values from Facebook (all the profile. stuff)
-      if (!user) {
-        user = new God({
-          googleId: profile.id,
-          name: profile.displayName,
-          email: profile.emails[0].value,
-          username: profile.displayName,
-          provider: 'google',
-          google: profile._json,
-        });
-        console.log(user);
-        // console.log("Google data");
-        user.save(function (err) {
-          if (err) console.log(err);
-          console.log("save");
-         // return 
-          done(null, user);
-        });
-      } else {
-        //found user. Return
-        console.log("found user");
-        console.log(user);
-        //return 
-        done(null, user);
-      }
-    });
-  }
-));
-router.get('/auth/google',passport.authenticate('google',
-{scope: [ 'https://www.googleapis.com/auth/plus.login',
- 'https://www.googleapis.com/auth/plus.profile.emails.read' ]}));
-router.get( '/auth/google/callback', 
-    passport.authenticate( 'google', { 
-        successRedirect: 'http://localhost:4200/dashboard',
-        failureRedirect: 'http://localhost:4200/login'
-}));
+// var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
+//   // used to serialize the user for the session
+//   passport.serializeUser(function (user, done) {
+//     console.log("in serializeUser user");
+//     done(null, user.id);
+//   });
+//   // used to deserialize the user
+//   passport.deserializeUser(function(id, done) {
+//     User.findById(id, function(err, user) {
+//       console.log("In deserialize user");
+//         done(err, user);
+//     });
+//   });
+// passport.use(new GoogleStrategy({
+//     clientID:  '253236158197-v3t0oaav0op4fsq2qorqhv8jmaj1ante.apps.googleusercontent.com'  ,
+//     clientSecret: 'Dzz4NAKNVW5W7fWux4BPvRbQ',
+//     callbackURL: "http://localhost:8080/user/auth/google/callback",
+//     passReqToCallback   : true
+//   },
+//   function(request, accessToken, refreshToken, profile, done) { 
+//     // console.log(profile);
+//     console.log(profile.id);
+//     God.findOne({
+//       googleId: profile.id,
+//     }, function (err, user) {
+//       //No user was found... so create a new user with values from Facebook (all the profile. stuff)
+//       if (!user) {
+//         user = new God({
+//           googleId: profile.id,
+//           name: profile.displayName,
+//           email: profile.emails[0].value,
+//           username: profile.displayName,
+//           provider: 'google',
+//           google: profile._json,
+//         });
+//         console.log(user);
+//         // console.log("Google data");
+//         user.save(function (err) {
+//           if (err) console.log(err);
+//           console.log("save");
+//          // return 
+//           done(null, user);
+//         });
+//       } else {
+//         //found user. Return
+//         console.log("found user");
+//         console.log(user);
+//         //return 
+//         done(null, user);
+//       }
+//     });
+//   }
+// ));
+// router.get('/auth/google',passport.authenticate('google',
+// {scope: [ 'https://www.googleapis.com/auth/plus.login',
+//  'https://www.googleapis.com/auth/plus.profile.emails.read' ]}));
+// router.get( '/auth/google/callback', 
+//     passport.authenticate( 'google', { 
+//         successRedirect: 'http://localhost:4200/dashboard',
+//         failureRedirect: 'http://localhost:4200/login'
+// }));
 module.exports = router;
 
