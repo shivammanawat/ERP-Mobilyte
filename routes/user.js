@@ -99,6 +99,9 @@ router.post('/register', (req, res, next) => {
 
   let transporter = nodemailer.createTransport({
     service: 'Gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
       user: 'shivammanawat2526@gmail.com',
       pass: 'Avani@1997'
@@ -219,6 +222,9 @@ router.post('/forgotpassword', (req, res) => {
           `;
         let transporter = nodemailer.createTransport({
           service: 'Gmail',
+          host: 'smtp.gmail.com',
+          port: 465,
+          secure: true,
           auth: {
             user: 'shivammanawat2526@gmail.com',
             pass: 'Avani@1997'
