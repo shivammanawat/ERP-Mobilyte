@@ -21,7 +21,7 @@ mongoose.connection.on('connected', () => {
   mongoose.connection.on('error', (err) => {
     console.log('Database error '+err);
   });
-const port= process.env.port || 8080;
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.static(path.join(__dirname,'./public')));
