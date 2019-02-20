@@ -17,21 +17,21 @@ export class AuthService {
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/user/register', user, {headers: headers})
+    return this.http.post('user/register', user, {headers: headers})
       .map(res => res.json());
   }
 
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/user/authenticate', user, {headers: headers})
+    return this.http.post(' user/authenticate', user, {headers: headers})
       .map(res => res.json());
   }
 
   forgotpasswordUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/user/forgotpassword', user, {headers: headers})
+    return this.http.post('user/forgotpassword', user, {headers: headers})
       .map(res => res.json());
   }
 
@@ -39,7 +39,7 @@ export class AuthService {
   {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.put('http://localhost:8080/user/updatePassword', user, {headers: headers})
+    return this.http.put('user/updatePassword', user, {headers: headers})
       .map(res => res.json());
   }
 
@@ -86,7 +86,7 @@ export class AuthService {
     console.log("add task auth service " + JSON.stringify(task));
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/user/addtask', task, {headers: headers})
+    return this.http.post('user/addtask', task, {headers: headers})
       .map(res => res.json());
   }
 
@@ -110,7 +110,7 @@ export class AuthService {
   {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.delete('http://localhost:8080/user/' +task_id,{headers: headers})
+    return this.http.delete('user/' +task_id,{headers: headers})
      .map(res => res.json());
   } 
 
@@ -118,7 +118,7 @@ export class AuthService {
    
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:8080/user/find/' +task_id, {headers: headers})
+    return this.http.get('user/find/' +task_id, {headers: headers})
       .map(res => res.json());
   }
   
