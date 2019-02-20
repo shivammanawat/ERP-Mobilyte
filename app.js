@@ -9,8 +9,7 @@ const config = require('./config/database');
 var GoogleStrategy = require('passport-google-oauth2').Strategy;
 const cookieSession=require('cookie-session');
 const app=express();
-//mongoose.connect(config.database);
-//mongoose.connect(config.database,{ useNewUrlParser: true });
+mongoose.set('useCreateIndex', true);
 mongoose.connect(config.database,{ useNewUrlParser: true }).then(() => {
 console.log("Connected to Database");
 }).catch((err) => {
@@ -30,13 +29,6 @@ app.get("/" , (req,res) =>
 app.use(cors());
 app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
-
-
-// app.use(cookieSession({
-//   maxAge: 24 * 60 * 60 * 1000,
-//   keys: ["fgdfgdgd"]
- 
-// }));
 
 app.use(passport.initialize());
 app.use(passport.session());
