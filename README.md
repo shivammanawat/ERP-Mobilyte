@@ -1,7 +1,7 @@
 
 # MEAN Stack Web App 
 
-# implemented
+# Implemented
 
 Rest API -NodeJS/Express
 
@@ -46,7 +46,7 @@ for localhost
 run http://localhost:4200/
 
 
-# back end
+# Back End
 
 
 $npm install
