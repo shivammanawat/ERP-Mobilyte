@@ -1,0 +1,36 @@
+
+  .mypad
+  {
+    background-color:#3f3f3f;
+    padding-top:-1px;
+  }
+  .navbar
+  {
+    background-color:#3f3f3f;
+    padding: .5rem;
+  }
+  .navbar-nav li
+  {
+    background-color:#3f3f3f;
+    padding-right:10px;
+  }
+  .nav-link
+  {
+    background-color:#3f3f3f;
+    font-size:0.7em !important;
+  }
+  .navbar-nav li a
+  {
+    background-color:#3f3f3f;
+    color:white; 
+  }
+  .navbar-dark
+  {
+    background-color:#3f3f3f;
+  }
+   .bg-dark {
+    background-color: #3f3f3f !important;
+}
+.navbar{
+  font-size:22px;
+}

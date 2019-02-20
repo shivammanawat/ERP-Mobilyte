@@ -1,0 +1,16 @@
+<div class="parallax">
+    <div class="container mt-3 padding">
+    <br>
+    <br>
+        <div *ngIf="user">
+        <ul class="list-group">
+        <h2 class=" mytext">Your Profile - {{user.firstName|uppercase}} </h2>
+      
+     
+        <li class="list-group-item">Firstname : {{user.firstName}}</li>
+        <li class="list-group-item">Lastname : {{user.lastName}}</li>
+        <li class="list-group-item">Email : {{user.email}}</li>
+      </ul>
+    </div>
+    </div>
+</div>

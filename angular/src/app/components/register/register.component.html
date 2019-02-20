@@ -1,0 +1,43 @@
+
+
+<div class="parallax">
+      <div class="container mt-3 padding mytext" align="center" >
+       
+        <div class="col-6 col-offset-3 padding"  >
+            <h2 class="page-header">Register</h2>
+          <form   (submit)="onRegisterSubmit()">
+              <div class="form-group">
+                  <div class="col-6 col-offset-3" >
+                      <label>First Name</label>
+                      <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-6 col-offset-3" >
+                      <label>Last Name</label>
+                      <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-6 col-offset-3" >
+                      <label>Email</label>
+                      <input type="text" [(ngModel)]="email" name="email" class="form-control" >
+                </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-6 col-offset-3" >
+                      <label>Password</label>
+                      <input type="password" [(ngModel)]="password" name="password" class="form-control">
+                </div>
+              </div>
+              <input type="submit" class="btn btn-success" value="Submit">
+              <br>
+              <br>
+         <p>Already have a account ?  <a [routerLink]="['/login']">Login Here</a><br><br>
+            
+         </p> 
+            </form>
+        </div>
+      </div>
+</div>
+

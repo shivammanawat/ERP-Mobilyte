@@ -1,0 +1,55 @@
+html,body{
+    height:100%;
+    width:100%;
+    font-family: 'Poppins', sans-serif;
+    color:#222;
+  }
+  
+  .btn
+  {
+  width: 100px;
+  }
+  
+  
+  .padding{
+    padding-bottom:2rem;
+  }
+  
+ 
+  .zoom {
+      transition: transform .2s; /* Animation */
+     
+      
+  }
+  
+  .zoom:hover {
+      transform: scale(1.1); 
+          
+  }
+  .zoomin {
+   animation:big 50s;
+  }
+  
+
+  footer
+  {
+  
+    background-color:#3f3f3f;
+    color:white;
+    padding-top:2rem;
+  }
+  .light{
+  border-top: 1px solid #d5d5d5;
+  width:75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+  }
+  
+  .colormylink{
+  color:white;
+  }
+  
+  #colormy{
+    color:red;
+  }
+  
