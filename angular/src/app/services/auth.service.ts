@@ -57,7 +57,7 @@ export class AuthService {
     if(this.isDev){
       return ep;
     } else {
-      return 'http://localhost:8080/'+ep;
+      return 'https://stark-spire-38251.herokuapp.com/'+ep;
     }
   }
   storeUserData(token, user) {
@@ -102,7 +102,7 @@ export class AuthService {
     let headers = new Headers();
     console.log("update task auth service " +  JSON.stringify(info));
     var infoo = info[0];
-    return this.http.put('http://localhost:8080/user/'+id, infoo,{headers: headers})
+    return this.http.put('user/'+id, infoo,{headers: headers})
         .map(res => res.json());
   }
   

@@ -93,7 +93,7 @@ router.post('/register', (req, res, next) => {
       <li>Email: ${req.body.email} </li>
     </ul>
     <h3>Message</h3>
-    <p>Click <a href="http://localhost:8080/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
+    <p>Click <a href="http://stark-spire-38251.herokuapp.com/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
   `;
   //<p>Click <a href="http://localhost:8080/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
 
@@ -215,7 +215,7 @@ router.post('/forgotpassword', (req, res) => {
           user.resetPasswordExpires = Date.now() + 360000;
         user.save();
         const output = `
-              <p>Click <a href="http://localhost:8080/user/reset/${token}/${req.body.email}">here</a> to reset password.</p>
+              <p>Click <a href="http://stark-spire-38251.herokuapp.com/user/reset/${token}/${req.body.email}">here</a> to reset password.</p>
           `;
         let transporter = nodemailer.createTransport({
           service: 'Gmail',
