@@ -1343,7 +1343,7 @@ module.exports = "html,body{\n    height:100%;\n    width:100%;\n    font-family
 /***/ 700:
 /***/ (function(module, exports) {
 
-module.exports = ".btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }"
+module.exports = ".btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  .mytext\n  {\n    color:white;\n  }\n  \n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 500px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}"
 
 /***/ }),
 
@@ -1385,7 +1385,7 @@ module.exports = ".btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;
 /***/ 706:
 /***/ (function(module, exports) {
 
-module.exports = ".btn1\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n\n\n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 500px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}"
+module.exports = ".btn1\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  .mytext\n{\n  color:white;\n}\n\n\n\n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 500px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}"
 
 /***/ }),
 
@@ -1448,7 +1448,7 @@ module.exports = "\n\n  <footer class=\"mybgcolor\">\n    <div class=\"container
 /***/ 715:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container mt-3 padding\">\n\n<br>\n<h2 class=\"page-header\">forgotpassword</h2>\n <form (submit)=\"onforgotpasswordSubmit()\" >\n  <!-- <form > -->\n<div class=\"form-group\">\n  <label for=\"email\">Email</label>\n  <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n  <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n</div>\n<input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n\n</div>"
+module.exports = "\n<div class=\"parallax\">\n<div class=\"container mt-3 padding\">\n\n<br>\n<h2 class=\"page-header mytext\">forgotpassword</h2>\n <form (submit)=\"onforgotpasswordSubmit()\" >\n  <!-- <form > -->\n<div class=\"form-group\">\n  <label  class=\"mytext\"  for=\"email\">Email</label>\n  <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n  <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n</div>\n<input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n\n</div>\n</div>"
 
 /***/ }),
 
@@ -1490,7 +1490,7 @@ module.exports = "\n\n<div class=\"parallax\">\n      <div class=\"container mt-
 /***/ 721:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"parallax\">\n        <div class=\"container mt-3 padding\">\n        \n                <h2 class=\"page-header\" >Reset Password</h2>\n                <form class=\"Reset Password\" (submit)=\"onresetSubmit()\">\n                        \n                        <div class=\"form-group\">\n                        <label for=\"Password\">Password</label>\n                        <input type=\"password\" class=\"form-control\" placeholder=\" Enter the Password\" [(ngModel)]=\"password\" name=\"password\">\n                        </div>\n                        <input class=\"btn btn-lg btn-primary\" type=\"submit\" value=\"Confirm Password\">        \n                </form>\n                \n        </div>\n</div>"
+module.exports = "<div class=\"parallax\">\n        <div class=\"container mt-3 padding\">\n        \n                <h2 class=\"page-header mytext\" >Reset Password</h2>\n                <form class=\"Reset Password\" (submit)=\"onresetSubmit()\">\n                        \n                        <div class=\"form-group\">\n                        <label class=\"mytext\" for=\"Password\">Password</label>\n                        <input type=\"password\" class=\"form-control\" placeholder=\" Enter the Password\" [(ngModel)]=\"password\" name=\"password\">\n                        </div>\n                        <input class=\"btn btn-lg btn-primary\" type=\"submit\" value=\"Confirm Password\">        \n                </form>\n                \n        </div>\n</div>"
 
 /***/ }),
 

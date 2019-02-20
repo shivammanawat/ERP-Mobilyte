@@ -95,6 +95,8 @@ router.post('/register', (req, res, next) => {
     <h3>Message</h3>
     <p>Click <a href="http://localhost:8080/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
   `;
+  //<p>Click <a href="http://localhost:8080/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
+
   let transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
