@@ -104,7 +104,7 @@ router.post('/register', (req, res, next) => {
     secure: true,
     auth: {
       user: 'shivammanawat2526@gmail.com',
-      pass: 'Avani@1997'
+      pass: 'Avani@199725'
     },
     tls: {
       rejectUnauthorized: false
@@ -227,7 +227,7 @@ router.post('/forgotpassword', (req, res) => {
           secure: true,
           auth: {
             user: 'shivammanawat2526@gmail.com',
-            pass: 'Avani@1997'
+            pass: 'Avani@199725'
           },
           tls: {
             rejectUnauthorized: false
