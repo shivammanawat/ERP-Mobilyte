@@ -1,20 +1,58 @@
-# MeanProj
 
-Run following steps in cmd
+# MEAN Stack Web App 
 
-In MeanProj-master\MeanProj-master -->  $ npm install
+# Implemented
 
-In MeanProj-master\MeanProj-master --> $ npm start
+Rest API -NodeJS/Express
 
-In Another cmd Run
 
-In  MeanProj-master\MeanProj-master\angular-src --> $npm install
+Token Generation and Authentication JWT
 
-In  MeanProj-master\MeanProj-master\angular-src--> $ npm install -g @angular/cli
 
-In  MeanProj-master\MeanProj-master\angular-src--> $ npm start
+CORS
+
+
+BootStrap
+
+
+Mongoose
+
+
+Angular2 / Angualar CLI
+
+
+Installation
+
+# Install the dependencies
+
+
+# Front End 
+
+cd angular
+
+
+$ npm install
+
+
+$ npm install -g @angular/cli (if required)
+
+
+$ npm run start
+
+
+for localhost
+
 
 run http://localhost:4200/
+
+
+# Back End
+
+
+$npm install
+
+$ npm start
+
 
 
 
