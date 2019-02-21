@@ -4,15 +4,10 @@
     top: 50px;
     max-width: 400px;
     margin: 0 auto;
+    background-color: red;
   }
 
-.alert .alert-danger .flash-message
-{
-    position: inline;
-    top: 50px;
-    max-width: 400px;
-    margin: 0 auto;
-}
+
 .btn
 {
 width: 100px;
