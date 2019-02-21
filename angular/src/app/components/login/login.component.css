@@ -1,14 +1,21 @@
-
-  .alert {
+#grayOutDiv
+{
+    background-color: #333;
+    opacity: 0.7;
     position: fixed;
-    top: 50px;
-    padding: .75rem 1.25rem;
-    margin-bottom: 1rem;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    background-color: red;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 9999;
 }
 
+.flash-message
+{
+    z-index: 10000;
+    position: relative;
+}
 .btn
 {
 width: 100px;
