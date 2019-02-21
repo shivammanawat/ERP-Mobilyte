@@ -151,7 +151,7 @@ router.get('/verifyuser/:token/:email', (req, res, next) => {
       user.active = true;
       console.log(user.active);
       user.save().then(emp => {
-        res.redirect('/login')
+        res.redirect('https://erpmobilyte.herokuapp.com/login')
       })
     }
     else {
