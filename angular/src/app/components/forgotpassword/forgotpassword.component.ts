@@ -28,10 +28,10 @@ export class ForgotpasswordComponent implements OnInit {
       }
       this.authService.forgotpasswordUser(user).subscribe(data => {
           if(data.success) {
-            this.flashMessage.show('Password Changed', {cssClass: 'alert-success', timeout: 2000});
+            this.flashMessage.show('Password Changed', {cssClass: 'alert-success myclass', timeout: 2000});
             this.router.navigate(['login']);
           } else {
-            this.flashMessage.show('Enter Correct Email First', {cssClass: 'alert-success', timeout: 2000});
+            this.flashMessage.show('Enter Correct Email First', {cssClass: 'alert-success myclass', timeout: 2000});
             this.router.navigate(['forgotpassword']);
           }
       });

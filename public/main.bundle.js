@@ -442,11 +442,11 @@ var AddtaskComponent = (function () {
         this.authService.addtask(task).subscribe(function (data) {
             if (data.success) {
                 console.log("success");
-                _this.flashMessage.show('Added Task', { cssClass: 'alert-success', timeout: 3000 });
+                _this.flashMessage.show('Added Task', { cssClass: 'alert-success myclass', timeout: 3000 });
                 _this.router.navigate(['/showtask']);
             }
             else {
-                _this.flashMessage.show('Task Already Exists', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.flashMessage.show('Task Already Exists', { cssClass: 'alert-danger myclass', timeout: 3000 });
                 _this.router.navigate(['/addtask']);
             }
         });
@@ -626,7 +626,7 @@ var EdittaskComponent = (function () {
         var id = this.route.snapshot.params['_id'];
         console.log("In update task " + this.task);
         this.authService.updateTask(id, this.task).subscribe(function (tasks) {
-            _this.flashMessage.show('Task Updated', { cssClass: 'alert-success', timeout: 3000 });
+            _this.flashMessage.show('Task Updated', { cssClass: 'alert-success myclass', timeout: 3000 });
             _this.router.navigate(['/showtask']);
         });
     };
@@ -718,11 +718,11 @@ var ForgotpasswordComponent = (function () {
         };
         this.authService.forgotpasswordUser(user).subscribe(function (data) {
             if (data.success) {
-                _this.flashMessage.show('Password Changed', { cssClass: 'alert-success', timeout: 2000 });
+                _this.flashMessage.show('Password Changed', { cssClass: 'alert-success myclass', timeout: 2000 });
                 _this.router.navigate(['login']);
             }
             else {
-                _this.flashMessage.show('Enter Correct Email First', { cssClass: 'alert-success', timeout: 2000 });
+                _this.flashMessage.show('Enter Correct Email First', { cssClass: 'alert-success myclass', timeout: 2000 });
                 _this.router.navigate(['forgotpassword']);
             }
         });
@@ -1015,10 +1015,10 @@ var RegisterComponent = (function () {
         // Register user
         this.authService.registerUser(user).subscribe(function (data) {
             if (data.success) {
-                _this.flashMessage.show('Verify Email To Login', { cssClass: 'alert-success', timeout: 3000 });
+                _this.flashMessage.show('Verify Email To Login', { cssClass: 'alert-success myclass', timeout: 3000 });
             }
             else {
-                _this.flashMessage.show('Email Already Exists', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.flashMessage.show('Email Already Exists', { cssClass: 'alert-danger myclass', timeout: 3000 });
                 _this.router.navigate(['/register']);
             }
         });
@@ -1076,11 +1076,11 @@ var ResetpasswordComponent = (function () {
         };
         this.authService.resetPasswordUser(user).subscribe(function (data) {
             if (data.success) {
-                _this.flashMessage.show('Password Reset Successfull', { cssClass: 'alert-success', timeout: 3000 });
+                _this.flashMessage.show('Password Reset Successfull', { cssClass: 'alert-success myclass', timeout: 3000 });
                 _this.router.navigate(['login']);
             }
             else {
-                _this.flashMessage.show('Problem in Resseting Password', { cssClass: 'alert-success', timeout: 3000 });
+                _this.flashMessage.show('Problem in Resseting Password', { cssClass: 'alert-success myclass', timeout: 3000 });
                 _this.router.navigate(['reset-password']);
             }
         });
@@ -1152,11 +1152,11 @@ var ShowtaskComponent = (function () {
         var _this = this;
         this.authService.deletetask(task_id).subscribe(function (data) {
             if (data.success) {
-                _this.flashMessage.show('Task Deleted', { cssClass: 'alert-success', timeout: 3000 });
+                _this.flashMessage.show('Task Deleted', { cssClass: 'alert-success myclass', timeout: 3000 });
                 _this.getTask();
             }
             else {
-                _this.flashMessage.show('Task Not Deleted', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.flashMessage.show('Task Not Deleted', { cssClass: 'alert-danger myclass', timeout: 3000 });
                 _this.router.navigate(['/addtask']);
             }
         });

@@ -52,9 +52,9 @@ export class RegisterComponent implements OnInit {
     // Register user
     this.authService.registerUser(user).subscribe(data => {
       if(data.success) { 
-        this.flashMessage.show('Verify Email To Login', {cssClass: 'alert-success', timeout: 3000});
+        this.flashMessage.show('Verify Email To Login', {cssClass: 'alert-success myclass', timeout: 3000});
       } else {
-        this.flashMessage.show('Email Already Exists', {cssClass: 'alert-danger', timeout: 3000});
+        this.flashMessage.show('Email Already Exists', {cssClass: 'alert-danger myclass', timeout: 3000});
         this.router.navigate(['/register']);
       }
     });

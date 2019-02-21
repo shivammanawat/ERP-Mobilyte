@@ -42,12 +42,12 @@ tasks : Object;
       {
         if(data.success)
         {
-        this.flashMessage.show('Task Deleted', {cssClass: 'alert-success', timeout: 3000});
+        this.flashMessage.show('Task Deleted', {cssClass: 'alert-success myclass', timeout: 3000});
         this.getTask(); 
         }
         else
         {
-        this.flashMessage.show('Task Not Deleted', {cssClass: 'alert-danger', timeout: 3000});
+        this.flashMessage.show('Task Not Deleted', {cssClass: 'alert-danger myclass', timeout: 3000});
         this.router.navigate(['/addtask']);
         }
        

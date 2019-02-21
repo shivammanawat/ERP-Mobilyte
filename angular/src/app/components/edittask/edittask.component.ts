@@ -36,7 +36,7 @@ getTask(){
        console.log("In update task " + this.task);
       this.authService.updateTask(id,this.task).subscribe( (tasks) => 
       {
-        this.flashMessage.show('Task Updated', {cssClass: 'alert-success', timeout: 3000});
+        this.flashMessage.show('Task Updated', {cssClass: 'alert-success myclass', timeout: 3000});
         this.router.navigate(['/showtask']);
       })
     }

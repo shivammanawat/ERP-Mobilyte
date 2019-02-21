@@ -2,8 +2,7 @@
 .myclass
 {
     position: fixed;
-    top: 50px;
+    top: 70px;
     max-width: 400px;
     margin: 0 auto;
-    background-color: red;
   }

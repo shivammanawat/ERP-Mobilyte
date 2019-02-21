@@ -35,10 +35,10 @@ export class AddtaskComponent implements OnInit {
    this.authService.addtask(task).subscribe(data => {
       if(data.success) {
         console.log("success");
-        this.flashMessage.show('Added Task', {cssClass: 'alert-success', timeout: 3000});
+        this.flashMessage.show('Added Task', {cssClass: 'alert-success myclass', timeout: 3000});
         this.router.navigate(['/showtask']);
       } else {
-        this.flashMessage.show('Task Already Exists', {cssClass: 'alert-danger', timeout: 3000});
+        this.flashMessage.show('Task Already Exists', {cssClass: 'alert-danger myclass', timeout: 3000});
         this.router.navigate(['/addtask']);
       }
     });
