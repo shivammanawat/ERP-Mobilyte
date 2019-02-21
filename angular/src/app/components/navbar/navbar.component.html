@@ -8,15 +8,11 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-          <a class="nav-link" [routerLink]="['/aboutus']">Aboutus<span></span></a>
-        </li>
+       
 
       </ul>
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item"  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-              <a class="nav-link" [routerLink]="['/']">Home </a>
-            </li>
+          
         <li class="nav-item" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
           <a class="nav-link" [routerLink]="['/dashboard']">Dashboard </a>
         </li>
@@ -29,6 +25,9 @@
         <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
           <a class="nav-link" [routerLink]="['/register']">Register</a>
         </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+            <a class="nav-link" [routerLink]="['/aboutus']">Aboutus</a>
+          </li>
         <li class="nav-item" *ngIf="authService.loggedIn()"><a class="nav-link" (click)="onLogoutClick()" href="#">Logout</a>
         </li>
     
