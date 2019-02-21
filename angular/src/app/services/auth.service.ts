@@ -57,7 +57,7 @@ export class AuthService {
     if(this.isDev){
       return ep;
     } else {
-      return 'https://stark-spire-38251.herokuapp.com/'+ep;
+      return 'https://erpmobilyte.herokuapp.com/'+ep;
     }
   }
   storeUserData(token, user) {
