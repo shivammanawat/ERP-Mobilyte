@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
           this.flashMessage.show('Logged In', {cssClass: 'alert-success',});
           this.router.navigate(['dashboard']);
         } else {
-          this.flashMessage.show('Wrong Password', {cssClass: 'alert-danger', });
+          this.flashMessage.show('Wrong Password', {cssClass: 'alert-danger myclass', });
           this.router.navigate(['login']);
         }
     });
