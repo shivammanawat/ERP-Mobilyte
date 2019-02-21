@@ -403,7 +403,7 @@ var AboutusComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(18);
@@ -446,7 +446,7 @@ var AddtaskComponent = (function () {
                 _this.router.navigate(['/showtask']);
             }
             else {
-                _this.flashMessage.show('already exists', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.flashMessage.show('Task Already Exists', { cssClass: 'alert-danger', timeout: 3000 });
                 _this.router.navigate(['/addtask']);
             }
         });
@@ -508,7 +508,7 @@ var DashboardComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailtaskComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -584,21 +584,9 @@ var DetailtaskComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EdittaskComponent; });
-// import { Component, OnInit } from '@angular/core';
-// import { AuthService } from '../../services/auth.service';
-// import { Router } from '@angular/router';
-// import { FlashMessagesService } from 'angular2-flash-messages';
-// import { ActivatedRoute} from '@angular/router';
-// import { Task} from '../../taskmodel';
-// @Component({
-//   selector: 'app-edittask',
-//   templateUrl: './edittask.component.html',
-//   styleUrls: ['./edittask.component.css']
-// })
-// export class EdittaskComponent implements OnInit {
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -636,11 +624,9 @@ var EdittaskComponent = (function () {
     EdittaskComponent.prototype.updateTask = function (id, info) {
         var _this = this;
         var id = this.route.snapshot.params['_id'];
-        // console.log("Id of edit task" + id);
         console.log("In update task " + this.task);
         this.authService.updateTask(id, this.task).subscribe(function (tasks) {
-            // this.task=tasks;
-            // console.log("In update task in edit task " +  JSON.stringify(this.task));
+            _this.flashMessage.show('Task Updated', { cssClass: 'alert-success', timeout: 3000 });
             _this.router.navigate(['/showtask']);
         });
     };
@@ -701,7 +687,7 @@ var FooterComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForgotpasswordComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -732,11 +718,11 @@ var ForgotpasswordComponent = (function () {
         };
         this.authService.forgotpasswordUser(user).subscribe(function (data) {
             if (data.success) {
-                _this.flashMessage.show(data.msg, { cssClass: 'alert-success', timeout: 2000 });
+                _this.flashMessage.show('Password Changed', { cssClass: 'alert-success', timeout: 2000 });
                 _this.router.navigate(['login']);
             }
             else {
-                _this.flashMessage.show('fill your correct email first', { cssClass: 'alert-success', timeout: 2000 });
+                _this.flashMessage.show('Enter Correct Email First', { cssClass: 'alert-success', timeout: 2000 });
                 _this.router.navigate(['forgotpassword']);
             }
         });
@@ -798,7 +784,7 @@ var HomeComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -834,11 +820,11 @@ var LoginComponent = (function () {
         this.authService.authenticateUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.authService.storeUserData(data.token, data.user);
-                _this.flashMessage.show('You are login', { cssClass: 'alert-success', timeout: 2000 });
+                _this.flashMessage.show('Logged In', { cssClass: 'alert-success', timeout: 3000 });
                 _this.router.navigate(['dashboard']);
             }
             else {
-                _this.flashMessage.show(data.msg, { cssClass: 'alert-success', timeout: 3000 });
+                _this.flashMessage.show('Wrong Password', { cssClass: 'alert-danger', timeout: 3000 });
                 _this.router.navigate(['login']);
             }
         });
@@ -916,7 +902,7 @@ var NavbarComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -950,7 +936,7 @@ var ProfileComponent = (function () {
     ProfileComponent.prototype.onLogoutClick = function () {
         this.authService.logout();
         this.flashMessage.show('You are logged out', {
-            cssClass: 'alert-success',
+            cssClass: 'alert-info',
             timeout: 3000
         });
         this.router.navigate(['/login']);
@@ -977,7 +963,7 @@ var ProfileComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(18);
@@ -1027,12 +1013,10 @@ var RegisterComponent = (function () {
         // Register user
         this.authService.registerUser(user).subscribe(function (data) {
             if (data.success) {
-                _this.flashMessage.show('Please verify your mail first', { cssClass: 'alert-success', timeout: 3000 });
+                _this.flashMessage.show('Verify Email To Login', { cssClass: 'alert-success', timeout: 3000 });
             }
             else {
-                //alert("username or email duplicate");
-                _this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });
-                //
+                _this.flashMessage.show('Email Already Exists', { cssClass: 'alert-danger', timeout: 3000 });
                 _this.router.navigate(['/register']);
             }
         });
@@ -1059,6 +1043,8 @@ var RegisterComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResetpasswordComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1072,10 +1058,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ResetpasswordComponent = (function () {
-    function ResetpasswordComponent(authService, router) {
+    function ResetpasswordComponent(authService, router, flashMessage) {
         this.authService = authService;
         this.router = router;
+        this.flashMessage = flashMessage;
     }
     ResetpasswordComponent.prototype.ngOnInit = function () {
     };
@@ -1086,12 +1074,11 @@ var ResetpasswordComponent = (function () {
         };
         this.authService.resetPasswordUser(user).subscribe(function (data) {
             if (data.success) {
-                // this.authService.storeUserData(data.token, data.user);
-                alert("Please login again");
+                _this.flashMessage.show('Password Reset Successfull', { cssClass: 'alert-success', timeout: 3000 });
                 _this.router.navigate(['login']);
             }
             else {
-                alert("Reset password again");
+                _this.flashMessage.show('Problem in Resseting Password', { cssClass: 'alert-success', timeout: 3000 });
                 _this.router.navigate(['reset-password']);
             }
         });
@@ -1102,10 +1089,10 @@ var ResetpasswordComponent = (function () {
             template: __webpack_require__(721),
             styles: [__webpack_require__(706)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _c) || Object])
     ], ResetpasswordComponent);
     return ResetpasswordComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=/home/shivam/Desktop/ERPMobilyte/angular/src/resetpassword.component.js.map
 
@@ -1118,7 +1105,7 @@ var ResetpasswordComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowtaskComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1163,9 +1150,11 @@ var ShowtaskComponent = (function () {
         var _this = this;
         this.authService.deletetask(task_id).subscribe(function (data) {
             if (data.success) {
+                _this.flashMessage.show('Task Deleted', { cssClass: 'alert-success', timeout: 3000 });
                 _this.getTask();
             }
             else {
+                _this.flashMessage.show('Task Not Deleted', { cssClass: 'alert-danger', timeout: 3000 });
                 _this.router.navigate(['/addtask']);
             }
         });
@@ -1448,7 +1437,7 @@ module.exports = "\n\n  <footer class=\"mybgcolor\">\n    <div class=\"container
 /***/ 715:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"parallax\">\n<div class=\"container mt-3 padding\">\n\n<br>\n<h2 class=\"page-header mytext\">forgotpassword</h2>\n <form (submit)=\"onforgotpasswordSubmit()\" >\n\n<div class=\"form-group\">\n  <label for=\"email\">Email</label>\n  <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n  <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n</div>\n<input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n\n</div>\n</div>"
+module.exports = "<!-- \n<div class=\"parallax\">\n<div class=\"container mt-3 padding\">\n\n<br>\n<h2 class=\"page-header mytext\">forgotpassword</h2>\n <form (submit)=\"onforgotpasswordSubmit()\" >\n\n<div class=\"form-group\">\n  <label for=\"email\">Email</label>\n  <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n  <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n</div>\n<input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n\n</div>\n</div> -->\n\n\n<div class=\"parallax\">\n\n<div class=\"container mt-3 padding\" align=\"center\" >\n    <h1>Forgot Password</h1>\n    <div class=\"col-6 col-offset-3\" >\n  <div class=\"panel panel-default\">\n  <br>\n    <div class=\"panel-body\">\n        <form (submit)=\"onforgotpasswordSubmit()\" >\n  \n    <div class=\"form-group\">\n        <label for=\"email\">Email</label>\n        <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n        <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>      \n    </div>\n\n    <div class=\"form-group\">\n      <div class=\"col-sm-offset-2 col-sm-8\">\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n      </div>\n    </div>\n  </form>\n  \n    </div>\n  </div>\n  </div>\n  </div>    \n</div>"
 
 /***/ }),
 

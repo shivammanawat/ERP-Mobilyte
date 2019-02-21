@@ -38,11 +38,8 @@ export class AddtaskComponent implements OnInit {
         this.flashMessage.show('Added Task', {cssClass: 'alert-success', timeout: 3000});
         this.router.navigate(['/showtask']);
       } else {
- 
-        this.flashMessage.show('already exists', {cssClass: 'alert-danger', timeout: 3000});
-       
+        this.flashMessage.show('Task Already Exists', {cssClass: 'alert-danger', timeout: 3000});
         this.router.navigate(['/addtask']);
-     
       }
     });
     }

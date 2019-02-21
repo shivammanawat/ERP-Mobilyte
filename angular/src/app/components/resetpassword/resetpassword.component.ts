@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { FlashMessagesService } from 'angular2-flash-messages';
 @Component({
   selector: 'app-resetpassword',
   templateUrl: './resetpassword.component.html',
@@ -11,6 +12,7 @@ export class ResetpasswordComponent implements OnInit {
   constructor(
     private authService: AuthService,
      private router: Router,
+     private flashMessage: FlashMessagesService
   ) { }
 
   ngOnInit() {
@@ -24,11 +26,10 @@ export class ResetpasswordComponent implements OnInit {
 
     this.authService.resetPasswordUser(user).subscribe(data => {
         if(data.success) {
-         // this.authService.storeUserData(data.token, data.user);
-         alert("Please login again");
+          this.flashMessage.show('Password Reset Successfull', {cssClass: 'alert-success', timeout: 3000})
            this.router.navigate(['login']);
          } else {
-         alert("Reset password again");
+          this.flashMessage.show('Problem in Resseting Password', {cssClass: 'alert-success', timeout: 3000})
            this.router.navigate(['reset-password']);
          }
      });
