@@ -1283,7 +1283,7 @@ var environment = {
 /***/ 693:
 /***/ (function(module, exports) {
 
-module.exports = ".container\n{\n    margin-top: 50px;\n    padding-top: 10px;\n}\n\n/* .alert .flash-message .alert-danger\n{\n    position: fixed;\n    top: 50px;\n    max-width: 400px;\n    margin: 0 auto;\n} */"
+module.exports = ".container\n{\n    margin-top: 50px;\n    padding-top: 10px;\n}\n\n#flash-message \n{\n    position: fixed;\n    top: 50px;\n    max-width: 400px;\n    margin: 0 auto;\n} \n"
 
 /***/ }),
 
