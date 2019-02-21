@@ -1399,7 +1399,7 @@ module.exports = ".btn1\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px
 /***/ 708:
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n\n \n  <router-outlet></router-outlet>\n  <flash-messages></flash-messages>\n    <app-footer></app-footer>\n  \n"
+module.exports = "<app-navbar></app-navbar>\n<br>\n<br>\n<flash-messages></flash-messages>\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n  \n"
 
 /***/ }),
 
