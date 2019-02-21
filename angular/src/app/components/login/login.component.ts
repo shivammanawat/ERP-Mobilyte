@@ -33,11 +33,11 @@ export class LoginComponent implements OnInit {
     this.authService.authenticateUser(user).subscribe(data => {
         if(data.success) {
           this.authService.storeUserData(data.token, data.user);
-          this.flashMessage.show('Logged In', {cssClass: 'alert-success', timeout: 3000});
+          this.flashMessage.show('Logged In', {cssClass: 'alert-success myclass', timeout: 3000});
           // this.flashMessage.grayOut(true); // turn on gray out feature
           this.router.navigate(['dashboard']);
         } else {
-          this.flashMessage.show('Wrong Password', {cssClass: ' alert-danger', timeout: 3000});
+          this.flashMessage.show('Wrong Password', {cssClass: ' alert-danger myclass', timeout: 3000});
           // this.flashMessage.grayOut(true); // turn on gray out feature
           this.router.navigate(['login']);
         }

@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__(691)();
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.myclass\n{\n    position: fixed;\n    top: 50px;\n    max-width: 400px;\n    margin: 0 auto;\n    background-color: red;\n  }", ""]);
 
 // exports
 
