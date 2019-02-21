@@ -1,12 +1,13 @@
-.myclass
-{
-    position: inline;
-    top: 50px;
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: red;
-  }
 
+  .alert {
+    position: fixed;
+    top: 50px;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    background-color: red;
+}
 
 .btn
 {
