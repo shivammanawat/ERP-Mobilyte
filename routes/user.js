@@ -93,7 +93,7 @@ router.post('/register', (req, res, next) => {
       <li>Email: ${req.body.email} </li>
     </ul>
     <h3>Message</h3>
-    <p>Click <a href="https://erpmobilyte.herokuapp.com/${token}/${req.body.email}">here</a> to activate.</p>
+    <p>Click <a href="https://erpmobilyte.herokuapp.com/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
   `;
   //<p>Click <a href="http://localhost:8080/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
 
@@ -151,7 +151,7 @@ router.get('/verifyuser/:token/:email', (req, res, next) => {
       user.active = true;
       console.log(user.active);
       user.save().then(emp => {
-       return res.redirect('/login')
+       return res.redirect('/login');
       })
     }
     else {
