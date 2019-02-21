@@ -820,11 +820,11 @@ var LoginComponent = (function () {
         this.authService.authenticateUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.authService.storeUserData(data.token, data.user);
-                _this.flashMessage.show('Logged In', { cssClass: 'alert-success', class: 'flash' });
+                _this.flashMessage.show('Logged In', { cssClass: 'alert-success' });
                 _this.router.navigate(['dashboard']);
             }
             else {
-                _this.flashMessage.show('Wrong Password', { cssClass: 'alert-danger', class: 'flash' });
+                _this.flashMessage.show('Wrong Password', { cssClass: 'alert-danger' });
                 _this.router.navigate(['login']);
             }
         });
@@ -1283,7 +1283,7 @@ var environment = {
 /***/ 693:
 /***/ (function(module, exports) {
 
-module.exports = ".container\n{\n    margin-top: 50px;\n    padding-top: 10px;\n}"
+module.exports = ".container\n{\n    margin-top: 50px;\n    padding-top: 10px;\n}\n\n.alert .flash-message .alert-danger\n{\n    position: fixed;\n    top: 50px;\n    max-width: 400px;\n    margin: 0 auto;\n}"
 
 /***/ }),
 
@@ -1346,7 +1346,7 @@ module.exports = "html,body{\n  height:100%;\n  width:100%;\n  font-family: 'Pop
 /***/ 702:
 /***/ (function(module, exports) {
 
-module.exports = "\n.flash\n{\n  position: fixed;\n  top: 50px;\n  max-width: 400px;\n  margin: 0 auto;\n}\n\n\n.btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n\n      .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 550px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    \n}\n.mytext\n{\n  color:white;\n}"
+module.exports = "\n\n\n.btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n\n      .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 550px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    \n}\n.mytext\n{\n  color:white;\n}"
 
 /***/ }),
 
