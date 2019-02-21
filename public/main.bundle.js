@@ -820,13 +820,13 @@ var LoginComponent = (function () {
         this.authService.authenticateUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.authService.storeUserData(data.token, data.user);
-                // this.flashMessage.show('Logged In', {cssClass: 'alert-success', timeout: 232300});
-                _this.flashMessage.grayOut(true); // turn on gray out feature
+                _this.flashMessage.show('Logged In', { cssClass: 'alert-success', timeout: 3000 });
+                // this.flashMessage.grayOut(true); // turn on gray out feature
                 _this.router.navigate(['dashboard']);
             }
             else {
-                // this.flashMessage.show('Wrong Password', {cssClass: ' alert-danger', timeout: 2423000});
-                _this.flashMessage.grayOut(true); // turn on gray out feature
+                _this.flashMessage.show('Wrong Password', { cssClass: ' alert-danger', timeout: 3000 });
+                // this.flashMessage.grayOut(true); // turn on gray out feature
                 _this.router.navigate(['login']);
             }
         });
