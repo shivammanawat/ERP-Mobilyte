@@ -820,11 +820,11 @@ var LoginComponent = (function () {
         this.authService.authenticateUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.authService.storeUserData(data.token, data.user);
-                _this.flashMessage.show('Logged In', { cssClass: 'alert-success', });
+                _this.flashMessage.show('Logged In', { cssClass: 'alert-success myclass', timeout: 232300 });
                 _this.router.navigate(['dashboard']);
             }
             else {
-                _this.flashMessage.show('Wrong Password', { cssClass: 'alert-danger myclass', });
+                _this.flashMessage.show('Wrong Password', { cssClass: 'alert-danger myclass', timeout: 2423000 });
                 _this.router.navigate(['login']);
             }
         });
