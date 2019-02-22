@@ -1433,7 +1433,7 @@ module.exports = "/* .btn\n{\nwidth: 100px;\n} */\n.padding{\n    padding-bottom
 /***/ 706:
 /***/ (function(module, exports) {
 
-module.exports = "\n    .padding{\n        padding-bottom:20px;\n        padding-top:5%;\n      }\n    .mytext\n    {\n      color:white;\n    }\n    .btn\n    {\n      padding: 10px 28px;\n      font-size: 14px;\n      width: 18%;\n    }\n  .parallax { \n\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n\n    height: 500px; \n\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}"
+module.exports = "\n    .padding{\n        padding-bottom:20px;\n        padding-top:5%;\n      }\n    .mytext\n    {\n      color:white;\n    }\n    .btn\n    {\n      padding: 10px 28px;\n      font-size: 14px;\n      width: 61%;\n    }\n  .parallax { \n\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n\n    height: 500px; \n\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}"
 
 /***/ }),
 
