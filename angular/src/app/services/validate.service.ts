@@ -18,6 +18,18 @@ export class ValidateService {
     return re.test(email);
   }
 
+  validateid(taskId){ 
+    const re = /^[1-9]\d*$/;       
+    return re.test(taskId);
+    }
+   
+    validatetask(task){
+      if(task.taskId == undefined || task.taskName == undefined || task.taskDesc == undefined || task.taskHandler == undefined || task.taskClientName == undefined ){
+        return false;
+      } else {
+        return true;
+      }
+    }
 
 }
 

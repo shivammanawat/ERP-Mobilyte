@@ -1,11 +1,64 @@
 webpackJsonp([1,4],{
 
+/***/ 108:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ValidateService = (function () {
+    function ValidateService() {
+    }
+    ValidateService.prototype.validateRegister = function (user) {
+        if (user.firstName == undefined || user.email == undefined || user.lastName == undefined || user.password == undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ValidateService.prototype.validateEmail = function (email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    };
+    ValidateService.prototype.validateid = function (taskId) {
+        var re = /^[1-9]\d*$/;
+        return re.test(taskId);
+    };
+    ValidateService.prototype.validatetask = function (task) {
+        if (task.taskId == undefined || task.taskName == undefined || task.taskDesc == undefined || task.taskHandler == undefined || task.taskClientName == undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ValidateService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [])
+    ], ValidateService);
+    return ValidateService;
+}());
+//# sourceMappingURL=/home/shivam/Desktop/ERPMobilyte/angular/src/validate.service.js.map
+
+/***/ }),
+
 /***/ 22:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(728);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__(538);
@@ -132,47 +185,6 @@ var AuthService = (function () {
 
 /***/ }),
 
-/***/ 340:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ValidateService = (function () {
-    function ValidateService() {
-    }
-    ValidateService.prototype.validateRegister = function (user) {
-        if (user.firstName == undefined || user.email == undefined || user.lastName == undefined || user.password == undefined) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    };
-    ValidateService.prototype.validateEmail = function (email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-    };
-    ValidateService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [])
-    ], ValidateService);
-    return ValidateService;
-}());
-//# sourceMappingURL=/home/shivam/Desktop/ERPMobilyte/angular/src/validate.service.js.map
-
-/***/ }),
-
 /***/ 398:
 /***/ (function(module, exports) {
 
@@ -246,10 +258,10 @@ var AppComponent = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(477);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(516);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__ = __webpack_require__(527);
@@ -258,7 +270,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_profile_profile_component__ = __webpack_require__(528);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__ = __webpack_require__(525);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_register_register_component__ = __webpack_require__(529);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_validate_service__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_validate_service__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_flash_messages_module__ = __webpack_require__(341);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_flash_messages_module___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_angular2_flash_messages_module__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_auth_service__ = __webpack_require__(22);
@@ -407,6 +419,7 @@ var AboutusComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_validate_service__ = __webpack_require__(108);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddtaskComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -421,8 +434,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AddtaskComponent = (function () {
-    function AddtaskComponent(authService, router, flashMessage) {
+    function AddtaskComponent(validateService, authService, router, flashMessage) {
+        this.validateService = validateService;
         this.authService = authService;
         this.router = router;
         this.flashMessage = flashMessage;
@@ -438,7 +453,15 @@ var AddtaskComponent = (function () {
             taskHandler: this.taskHandler,
             taskClientName: this.taskClientName
         };
-        console.log("In add task" + task);
+        if (!this.validateService.validatetask(task)) {
+            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 800 });
+            return false;
+        }
+        // Validate id
+        if (!this.validateService.validateid(task.taskId)) {
+            this.flashMessage.show('Enter valid id', { cssClass: 'alert-danger myclass', timeout: 800 });
+            return false;
+        }
         this.authService.addtask(task).subscribe(function (data) {
             if (data.success) {
                 console.log("success");
@@ -457,10 +480,10 @@ var AddtaskComponent = (function () {
             template: __webpack_require__(710),
             styles: [__webpack_require__(695)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_app_services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_app_services_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_validate_service__["a" /* ValidateService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_validate_service__["a" /* ValidateService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_app_services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_app_services_auth_service__["a" /* AuthService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _d) || Object])
     ], AddtaskComponent);
     return AddtaskComponent;
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
 }());
 //# sourceMappingURL=/home/shivam/Desktop/ERPMobilyte/angular/src/addtask.component.js.map
 
@@ -689,6 +712,7 @@ var FooterComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_validate_service__ = __webpack_require__(108);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForgotpasswordComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -703,8 +727,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ForgotpasswordComponent = (function () {
-    function ForgotpasswordComponent(router, authService, flashMessage) {
+    function ForgotpasswordComponent(validateService, router, authService, flashMessage) {
+        this.validateService = validateService;
         this.router = router;
         this.authService = authService;
         this.flashMessage = flashMessage;
@@ -716,6 +742,16 @@ var ForgotpasswordComponent = (function () {
         var user = {
             email: this.email
         };
+        // Required Fields
+        if (!this.validateService.validateRegister(user)) {
+            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger myclass', timeout: 3000 });
+            return false;
+        }
+        // Validate Email
+        if (!this.validateService.validateEmail(user.email)) {
+            this.flashMessage.show('Please use a valid email', { cssClass: 'alert-danger myclass', timeout: 3000 });
+            return false;
+        }
         this.authService.forgotpasswordUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.flashMessage.show('Password Changed', { cssClass: 'alert-success myclass', timeout: 2000 });
@@ -733,10 +769,10 @@ var ForgotpasswordComponent = (function () {
             template: __webpack_require__(715),
             styles: [__webpack_require__(700)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_validate_service__["a" /* ValidateService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_validate_service__["a" /* ValidateService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _d) || Object])
     ], ForgotpasswordComponent);
     return ForgotpasswordComponent;
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
 }());
 //# sourceMappingURL=/home/shivam/Desktop/ERPMobilyte/angular/src/forgotpassword.component.js.map
 
@@ -786,6 +822,7 @@ var HomeComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_validate_service__ = __webpack_require__(108);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -800,8 +837,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var LoginComponent = (function () {
-    function LoginComponent(authService, router, flashMessage) {
+    function LoginComponent(validateService, authService, router, flashMessage) {
+        this.validateService = validateService;
         this.authService = authService;
         this.router = router;
         this.flashMessage = flashMessage;
@@ -817,6 +856,16 @@ var LoginComponent = (function () {
             email: this.email,
             password: this.password
         };
+        // Required Fields
+        if (!this.validateService.validateRegister(user)) {
+            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger myclass', timeout: 3000 });
+            return false;
+        }
+        // Validate Email
+        if (!this.validateService.validateEmail(user.email)) {
+            this.flashMessage.show('Please use a valid email', { cssClass: 'alert-danger myclass', timeout: 3000 });
+            return false;
+        }
         this.authService.authenticateUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.authService.storeUserData(data.token, data.user);
@@ -837,10 +886,10 @@ var LoginComponent = (function () {
             template: __webpack_require__(717),
             styles: [__webpack_require__(702)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_validate_service__["a" /* ValidateService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_validate_service__["a" /* ValidateService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _d) || Object])
     ], LoginComponent);
     return LoginComponent;
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
 }());
 //# sourceMappingURL=/home/shivam/Desktop/ERPMobilyte/angular/src/login.component.js.map
 
@@ -964,7 +1013,7 @@ var ProfileComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_services_auth_service__ = __webpack_require__(22);
@@ -1003,12 +1052,12 @@ var RegisterComponent = (function () {
         };
         // Required Fields
         if (!this.validateService.validateRegister(user)) {
-            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
+            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger myclass', timeout: 3000 });
             return false;
         }
         // Validate Email
         if (!this.validateService.validateEmail(user.email)) {
-            this.flashMessage.show('Please use a valid email', { cssClass: 'alert-danger', timeout: 3000 });
+            this.flashMessage.show('Please use a valid email', { cssClass: 'alert-danger myclass', timeout: 3000 });
             console.log("Please use a valid email");
             return false;
         }
@@ -1299,28 +1348,28 @@ module.exports = "\n.col-center {\n\tmargin: 0 auto;\n\tfloat: none !important;\
 /***/ 695:
 /***/ (function(module, exports) {
 
-module.exports = ".btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  .col-6\n  {\n    background-color:lightgrey;\n  }"
+module.exports = "\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  .col-6\n  {\n    background-color:lightgrey;\n  }"
 
 /***/ }),
 
 /***/ 696:
 /***/ (function(module, exports) {
 
-module.exports = ".container\n{\n    background-color: whitesmoke;\n}\n.btn\n{\nwidth: 100px;\n}\n\n.padding\n{\n   \n    padding-top:10%;\n}"
+module.exports = ".container\n{\n    background-color: whitesmoke;\n}\n\n\n.padding\n{\n   \n    padding-top:10%;\n}\n\n.btn\n{\n    padding: 14px 28px;\n    font-size: 14px;  \n}"
 
 /***/ }),
 
 /***/ 697:
 /***/ (function(module, exports) {
 
-module.exports = ".btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }"
+module.exports = "\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }"
 
 /***/ }),
 
 /***/ 698:
 /***/ (function(module, exports) {
 
-module.exports = ".btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  .col-6\n  {\n    background-color:lightgrey;\n  }"
+module.exports = "\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  .col-6\n  {\n    background-color:lightgrey;\n  }"
 
 /***/ }),
 
@@ -1334,21 +1383,21 @@ module.exports = "html,body{\n    height:100%;\n    width:100%;\n    font-family
 /***/ 700:
 /***/ (function(module, exports) {
 
-module.exports = ".btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  .mytext\n  {\n    color:white;\n  }\n  \n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 500px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n"
+module.exports = "\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  .mytext\n  {\n    color:white;\n  }\n  \n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 500px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n"
 
 /***/ }),
 
 /***/ 701:
 /***/ (function(module, exports) {
 
-module.exports = "html,body{\n  height:100%;\n  width:100%;\n  font-family: 'Poppins', sans-serif;\n  color:#222;\n}\n\n#nolist{\n  list-style-type:none;\n}\n\n.mypad\n{\n  padding-top:-1px;\n}\n\n.carousel-caption .btn{\n  font-size:60%;\n \n  }\n\n.carousel-inner img\n{\n  width:100%;\n  height:100%;\n}\n\n.carousel-caption\n{\n  position:absolute;\n   margin-top:40%;\n /* transform:translateY(-50%); */\n}\n\n.carousel-caption h1\n{\n  font-size:190%;\n  text-transform:uppercase;\n  text-shadow:1px 1px 10px #000;\n}\n\n.carousel-caption h3\n{\n  font-size:120%;\n  font-weight:500;\n  text-shadow:1px 1px 10px #000;\n  padding-bottom:1rem;\n  \n}\n\n.jumbotron{\n  padding:1rem;\n  border-radius:0px;\n}\n\n.padding{\n  padding-bottom:2rem;\n}\n\n.welcome\n{\n  width:75%;\n  margin:0 auto;\n  padding-top:2rem;\n  \n}\n\n.welcome h4\n{\n  border-top: 2px solid #b4b4b4;\n  width:95%;\n  margin-top:.3rem;\n  margin-bottom: 1rem;\n}\n\n.social a{\n  font-size:4.5rem;\n  padding:3rem;\n}\n\n.fa-facebook\n{\n  color:#3b5998;\n}\n.fa-twitter\n{\n  color:#00aced;\n}\n.fa-google-plus-g\n{\n  color:#dd4b39;\n}\n.fa-instagram\n{\n  color:#517fa4;\n}\n\n\n.fa-facebook:hover,\n.fa-twitter:hover,\n.fa-google-plus-g:hover,\n.fa-instagram:hover\n{\n  color:#d5d5d5;\n }\n\n\n@media (max-width: 992px)\n{\n  .carousel-inner img\n{\n  width:100%;\n  height:100%;\n}\n\n.left\n{\n  padding-left:80px;\n}\n      /* .carousel-caption\n      {\n        position:absolute;\n        top:10%;\n      } */\n      \n      .carousel-caption h1\n      {\n        font-size:200%;\n      }\n       \n      .carousel-caption h3\n      {\n        font-size:90%;\n        font-weight:400px;\n        padding-bottom:.2rem;\n      }\n      .carousel-caption .btn{\n      font-size:40%;\n      /* padding: 8px 14px; */\n      /* padding-top:0px; */\n\n      }\n      \n      .display-4{\n      font-size:220%;\n      }\n      \n  .social a{\n    font-size: 4em;\n    padding:2rem;\n  }\n}\n\n\n@media (max-width: 778px)\n{\n    /* .carousel-caption\n      {\n        position:absolute;\n        top:30%\n      } */\n      \n.left\n{\n  padding-left:50px;\n}\n      .carousel-caption h1\n      {\n        font-size:120%;\n      }\n      \n      .carousel-caption h3\n      {\n        font-size:90%;\n        font-weight:400;\n        padding-bottom:.2rem;\n      }\n      .carousel-caption .btn{\n      font-size:40%;\n      \n      }\n      \n      .display-4{\n      font-size:150%;\n      }\n      \n        .social a{\n        font-size: 2.5em;\n        padding:1.2rem;\n      }\n\n}\n@media (max-width: 576px)\n{\n  .left\n  {\n    padding-left:40px;\n  }\n      /* .carousel-caption\n      {\n        position:absolute;\n        top:20%\n      }    */\n      .carousel-caption h1\n      {\n        font-size:50%;\n      }\n      .carousel-caption h3\n      {\n        font-size:70%;\n      }\n      .carousel-caption .btn{\n      font-size:10%;\n      /* padding-top:0px;\n      padding: 4px 8px; */\n      }\n      .carousel-indicators\n      {\n        display:none;\n      }\n      .display-4{\n      font-size:40%;\n      }\n      \n      .social a{\n        font-size: 2em;\n        padding: .7rem;\n      }\n\n}\n\n  \n@media (min-width: 320px) and (max-width: 480px) \n{\n\n  .left\n  {\n    padding-left:20px;\n  }\n      .carousel-caption h1\n      {\n        font-size:20%;\n      }\n      .carousel-caption h3\n      {\n        font-size:30%;\n      }\n      .carousel-caption .btn{\n      font-size:5%;\n      /* padding-top:0px;\n      padding: 2px 6px; */\n      }\n      .carousel-indicators\n      {\n        display:none;\n      }\n      .display-4{\n      font-size:10%;\n      }\n      \n      .social a{\n        font-size: 1em;\n        padding: .4rem;\n      }\n\n}\n\n  \n.mynewpad\n{\n  padding-bottom: 300px;\n}\n\n\n.centered {\n    color:white;\n    position: absolute;\n    left:30%;\n    transform: translate(-20%, -150%);\n}\n  \n.img-responsive\n{\n  margin-top:0%;\n  width:50px;\n  transform: translate(0%,-20%);\n}\n \n\n.img-respo\n{\n  width:50%;\n  transform: translate(0%,20%);\n}\n \n\n\n#b{\n  animation-duration: 5s;\n  animation-name: slidein;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n\n@keyframes slidein {\n  from {\n    margin-left: -6%;\n    color:white;\n\n  }\n  to {\n    margin-left: 8%;\n   \n    color:white;\n  }\n}\n\n\n.zoom {\n    transition: transform .2s; /* Animation */\n   \n    \n}\n\n.zoom:hover {\n    transform: scale(1.1); \n        \n}\n.zoomin {\n animation:big 50s;\n}\n\n@keyframes big {\n0% { transform:scale(0.50) }\n100% { transform:scale(0.75) }\n}\n\n/* #my\n{\nanimation:rotater 20s infinite;\n}\n@keyframes rotater {\n0% { transform:rotate(0deg) scale(0.70) }\n50% { transform:rotate(90deg) scale(0.30) }\n100% { transform:rotate(0deg) scale(1) }\n} */\n\n\n#id1{\n  animation-duration: 25s;\n  animation-name: slide;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n@keyframes slide {\n  from {\n    margin-left:-10%;\n    color:black;\n  }\n  to {\n    margin-left: 2%;\n   \n    color:black;\n  }\n}\n\n.left\n{\n  padding-left:90px;\n}\n\n#id2{\n  animation-duration: 254s;\n  animation-name: slide1;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n@keyframes slide1 {\n  from {\n    margin-left:2%;\n    color:black;\n\n  }\n  to {\n    margin-left: -8%;\n    color:black;\n  }\n}\n\n\n/* ================================== */"
+module.exports = "html,body{\n  height:100%;\n  width:100%;\n  font-family: 'Poppins', sans-serif;\n  color:#222;\n}\n\n#nolist{\n  list-style-type:none;\n}\n\n.mypad\n{\n  padding-top:-1px;\n}\n\n.carousel-caption .btn{\n  padding: 10px 28px;\n  font-size: 14px;\n  width: 14%;\n  }\n\n\n.carousel-inner img\n{\n  width:100%;\n  height:100%;\n}\n\n.carousel-caption\n{\n  position:absolute;\n   margin-top:40%;\n /* transform:translateY(-50%); */\n}\n\n.carousel-caption h1\n{\n  font-size:190%;\n  text-transform:uppercase;\n  text-shadow:1px 1px 10px #000;\n}\n\n.carousel-caption h3\n{\n  font-size:120%;\n  font-weight:500;\n  text-shadow:1px 1px 10px #000;\n  padding-bottom:1rem;\n  \n}\n\n.jumbotron{\n  padding:1rem;\n  border-radius:0px;\n}\n\n.padding{\n  padding-bottom:2rem;\n}\n\n.welcome\n{\n  width:75%;\n  margin:0 auto;\n  padding-top:2rem;\n  \n}\n\n.welcome h4\n{\n  border-top: 2px solid #b4b4b4;\n  width:95%;\n  margin-top:.3rem;\n  margin-bottom: 1rem;\n}\n\n.social a{\n  font-size:4.5rem;\n  padding:3rem;\n}\n\n.fa-facebook\n{\n  color:#3b5998;\n}\n.fa-twitter\n{\n  color:#00aced;\n}\n.fa-google-plus-g\n{\n  color:#dd4b39;\n}\n.fa-instagram\n{\n  color:#517fa4;\n}\n\n\n.fa-facebook:hover,\n.fa-twitter:hover,\n.fa-google-plus-g:hover,\n.fa-instagram:hover\n{\n  color:#d5d5d5;\n }\n\n\n@media (max-width: 992px)\n{\n  .carousel-inner img\n{\n  width:100%;\n  height:100%;\n}\n\n.left\n{\n  padding-left:80px;\n}\n      /* .carousel-caption\n      {\n        position:absolute;\n        top:10%;\n      } */\n      \n      .carousel-caption h1\n      {\n        font-size:200%;\n      }\n       \n      .carousel-caption h3\n      {\n        font-size:90%;\n        font-weight:400px;\n        padding-bottom:.2rem;\n      }\n      .carousel-caption .btn{\n      font-size:40%;\n      /* padding: 8px 14px; */\n      /* padding-top:0px; */\n\n      }\n      \n      .display-4{\n      font-size:220%;\n      }\n      \n  .social a{\n    font-size: 4em;\n    padding:2rem;\n  }\n}\n\n\n@media (max-width: 778px)\n{\n   \n      \n      .left\n      {\n        padding-left:50px;\n      }\n\n      .carousel-caption h1\n      {\n        font-size:120%;\n      }\n      \n      .carousel-caption h3\n      {\n        font-size:90%;\n        font-weight:400;\n        padding-bottom:.2rem;\n      }\n      .carousel-caption .btn{\n      font-size:40%;\n      \n      }\n      \n      .display-4{\n      font-size:150%;\n      }\n      \n        .social a{\n        font-size: 2.5em;\n        padding:1.2rem;\n      }\n\n}\n@media (max-width: 576px)\n{\n  .left\n  {\n    padding-left:40px;\n  }\n      /* .carousel-caption\n      {\n        position:absolute;\n        top:20%\n      }    */\n      .carousel-caption h1\n      {\n        font-size:50%;\n      }\n      .carousel-caption h3\n      {\n        font-size:70%;\n      }\n      .carousel-caption .btn{\n      font-size:10%;\n      /* padding-top:0px;\n      padding: 4px 8px; */\n      }\n      .carousel-indicators\n      {\n        display:none;\n      }\n      .display-4{\n      font-size:40%;\n      }\n      \n      .social a{\n        font-size: 2em;\n        padding: .7rem;\n      }\n\n}\n\n  \n@media (min-width: 320px) and (max-width: 480px) \n{\n\n  .left\n  {\n    padding-left:20px;\n  }\n      .carousel-caption h1\n      {\n        font-size:20%;\n      }\n      .carousel-caption h3\n      {\n        font-size:30%;\n      }\n      .carousel-caption .btn{\n      font-size:5%;\n      /* padding-top:0px;\n      padding: 2px 6px; */\n      }\n      .carousel-indicators\n      {\n        display:none;\n      }\n      .display-4{\n      font-size:10%;\n      }\n      \n      .social a{\n        font-size: 1em;\n        padding: .4rem;\n      }\n\n}\n\n  \n.mynewpad\n{\n  padding-bottom: 300px;\n}\n\n\n.centered {\n    color:white;\n    position: absolute;\n    left:30%;\n    transform: translate(-20%, -150%);\n}\n  \n.img-responsive\n{\n  margin-top:0%;\n  width:50px;\n  transform: translate(0%,-20%);\n}\n \n\n.img-respo\n{\n  width:50%;\n  transform: translate(0%,20%);\n}\n \n\n\n#b{\n  animation-duration: 5s;\n  animation-name: slidein;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n\n@keyframes slidein {\n  from {\n    margin-left: -6%;\n    color:white;\n\n  }\n  to {\n    margin-left: 8%;\n   \n    color:white;\n  }\n}\n\n\n.zoom {\n    transition: transform .2s; /* Animation */\n   \n    \n}\n\n.zoom:hover {\n    transform: scale(1.1); \n        \n}\n.zoomin {\n animation:big 50s;\n}\n\n@keyframes big {\n0% { transform:scale(0.50) }\n100% { transform:scale(0.75) }\n}\n\n/* #my\n{\nanimation:rotater 20s infinite;\n}\n@keyframes rotater {\n0% { transform:rotate(0deg) scale(0.70) }\n50% { transform:rotate(90deg) scale(0.30) }\n100% { transform:rotate(0deg) scale(1) }\n} */\n\n\n#id1{\n  animation-duration: 25s;\n  animation-name: slide;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n@keyframes slide {\n  from {\n    margin-left:-10%;\n    color:black;\n  }\n  to {\n    margin-left: 2%;\n   \n    color:black;\n  }\n}\n\n.left\n{\n  padding-left:90px;\n}\n\n#id2{\n  animation-duration: 254s;\n  animation-name: slide1;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n@keyframes slide1 {\n  from {\n    margin-left:2%;\n    color:black;\n\n  }\n  to {\n    margin-left: -8%;\n    color:black;\n  }\n}\n"
 
 /***/ }),
 
 /***/ 702:
 /***/ (function(module, exports) {
 
-module.exports = "\n.btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n\n      .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 550px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    \n}\n.mytext\n{\n  color:white;\n}"
+module.exports = ".btn\n{\n    padding: 14px 28px;\n    font-size: 14px;  \n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n\n      .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 550px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    \n}\n.mytext\n{\n  color:white;\n}"
 
 /***/ }),
 
@@ -1362,28 +1411,28 @@ module.exports = "\n  .mypad\n  {\n    background-color:#3f3f3f;\n    padding-to
 /***/ 704:
 /***/ (function(module, exports) {
 
-module.exports = ".btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n.mytext\n{\n  color:white;\n}\n\n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 500px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}"
+module.exports = "/* .btn\n{\nwidth: 100px;\n} */\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n.mytext\n{\n  color:white;\n}\n\n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 500px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}"
 
 /***/ }),
 
 /***/ 705:
 /***/ (function(module, exports) {
 
-module.exports = ".btn\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n\n\n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 700px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n.mytext\n{\n  color:white;\n}"
+module.exports = "/* .btn\n{\nwidth: 100px;\n} */\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n\n\n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 700px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n.mytext\n{\n  color:white;\n}"
 
 /***/ }),
 
 /***/ 706:
 /***/ (function(module, exports) {
 
-module.exports = ".btn1\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  .mytext\n{\n  color:white;\n}\n\n\n\n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 500px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}"
+module.exports = "\n    .padding{\n        padding-bottom:20px;\n        padding-top:5%;\n      }\n    .mytext\n    {\n      color:white;\n    }\n\n  .parallax { \n\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n\n    height: 500px; \n\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}"
 
 /***/ }),
 
 /***/ 707:
 /***/ (function(module, exports) {
 
-module.exports = ".btn1\n{\nwidth: 100px;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }"
+module.exports = "\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }"
 
 /***/ }),
 
@@ -1411,7 +1460,7 @@ module.exports = "<!-- <div class=\"container\">\n\n\n  <h2 class=\"page-header\
 /***/ 711:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container mt-3 padding\" align=\"center\" >\n<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to Dashboard, You can Add, Edit, Get and Delete any task.</p>\n<br>\n<div>\n    <a class=\"btn btn-primary\" routerLink=\"/addtask\">Addtask</a> \n    <a class=\"btn btn-dark\" routerLink=\"/showtask\">Showtask</a> \n</div>\n<br>\n</div>\n\n"
+module.exports = "\n    <div class=\"container mt-3 padding\" align=\"center\" >\n            <h2 class=\"page-header\">Dashboard</h2>\n            <p>Welcome to Dashboard, You can Add, Edit, Get and Delete any task.</p>\n                <br>\n                    <div>\n                        <a class=\"btn btn-primary\" routerLink=\"/addtask\">Addtask</a> \n                        <a class=\"btn btn-dark\" routerLink=\"/showtask\">Showtask</a> \n                    </div>\n                <br>\n    </div>\n\n\n"
 
 /***/ }),
 
@@ -1439,14 +1488,14 @@ module.exports = "\n\n  <footer class=\"mybgcolor\">\n    <div class=\"container
 /***/ 715:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- \n<div class=\"parallax\">\n<div class=\"container mt-3 padding\">\n\n<br>\n<h2 class=\"page-header mytext\">forgotpassword</h2>\n <form (submit)=\"onforgotpasswordSubmit()\" >\n\n<div class=\"form-group\">\n  <label for=\"email\">Email</label>\n  <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n  <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n</div>\n<input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n\n</div>\n</div> -->\n\n\n<div class=\"parallax\">\n\n<div class=\"container mt-3 padding\" align=\"center\" >\n    <h1 class=\"mytext\">Forgot Password</h1>\n    <div class=\"col-6 col-offset-3\" >\n  <div class=\"panel panel-default\">\n  <br>\n    <div class=\"panel-body\">\n        <form (submit)=\"onforgotpasswordSubmit()\" >\n  \n    <div class=\"form-group\">\n        <label for=\"email\">Email</label>\n        <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n        <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>      \n    </div>\n\n    <div class=\"form-group\">\n      <div class=\"col-sm-offset-2 col-sm-8\">\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n      </div>\n    </div>\n  </form>\n  \n    </div>\n  </div>\n  </div>\n  </div>    \n</div>"
+module.exports = "\n\n<div class=\"parallax\">\n\n<div class=\"container mt-3 padding\" align=\"center\" >\n    <h1 class=\"mytext\">Forgot Password</h1>\n    <div class=\"col-6 col-offset-3\" >\n  <div class=\"panel panel-default\">\n  <br>\n    <div class=\"panel-body\">\n        <form (submit)=\"onforgotpasswordSubmit()\" >\n  \n    <div class=\"form-group\">\n        <label class=\"mytext\" for=\"email\">Email</label>\n        <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n        <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>      \n    </div>\n\n    <div class=\"form-group\">\n      <div class=\"col-sm-offset-2 col-sm-8\">\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n      </div>\n    </div>\n  </form>\n  \n    </div>\n  </div>\n  </div>\n  </div>    \n</div>"
 
 /***/ }),
 
 /***/ 716:
 /***/ (function(module, exports) {
 
-module.exports = "\n      <div id=\"slides\" class=\"carousel slide mypad\" data-ride=\"carousel\">\n\n          <ul class=\"carousel-indicators\">\n            <li data-target=\"#slides\" data-slide-to=\"0\" class=\"active\"></li>\n      \n            <li data-target=\"#slides\" data-slide-to=\"1\" class=\"active\"></li>\n      \n            <li data-target=\"#slides\" data-slide-to=\"2\" class=\"active\"></li>\n          </ul>\n      \n          <div class=\"carousel-inner mytext\">\n            <div class=\"carousel-item active\">\n                  <img class=\"mySlides\" src=\"https://www.divalto.com/app/uploads/2016/09/slide1.jpg\" >\n                    <div class=\"carousel-caption\">\n                               <h1  class=\"display-4\">ERP powered by</h1><h1   id=\"b\"> Mobilyte Solutions </h1>\n                                    <h3 class=\"display-4\">Our ERP software can easily be adapted to your business</h3>\n                                    <a class=\"btn btn-success\" [routerLink]=\"['/register']\">Register</a>\n                                     <a class=\"btn btn-primary\" [routerLink]=\"['/login']\">Login</a>   \n                    </div> \n            </div>\n            <div class=\"carousel-item \"> \n                  <img class=\"mySlides\" src=\"https://www.divalto.com/app/uploads/2016/09/slide2.jpg\"  >\n                        \n                          <div class=\"carousel-caption\">\n                             <h1  class=\"display-4\">ERP powered by</h1><h1   id=\"b\"> Mobilyte Solutions </h1>\n                                  <h3 class=\"display-4\">Our ERP software can easily be adapted to your business</h3>\n                                    <a class=\"btn btn-success\" [routerLink]=\"['/register']\">Register</a> \n                                     <a class=\"btn btn-primary\" [routerLink]=\"['/login']\">Login</a>\n                        </div> \n            </div>\n              <div class=\"carousel-item \">\n                  <img class=\"mySlides\" src=\"https://www.divalto.com/app/uploads/2016/09/mobilite-commerciaux.jpg\" >\n                          <div class=\"carousel-caption\">\n                                        <h1  class=\"display-4\">ERP powered by</h1><h1   id=\"b\"> Mobilyte Solutions</h1>\n                                    <h3 class=\"display-4\">Our ERP software can easily be adapted to your business\n                                      </h3>\n                                      <a class=\"btn btn-success\" [routerLink]=\"['/register']\">Register</a> \n                                      <a class=\"btn btn-primary\" [routerLink]=\"['/login']\">Login</a>\n                          </div> \n              </div>\n          </div>\n      \n      </div>\n      \n      \n      <div class=\"container-fluid jumbotron\">\n      <div class=\"row padding\">\n        <div class=\"col-12\">\n               <h4 class=\"display-4 text-center lead wow fadeInUp\" data-wow-delay=\"0.6s\"><strong>Our partnerships abroad are strategic </strong></h4>\n        </div>\n      </div>\n      \n      <div class=\"row padding\">\n        <div class=\"col-md-6 left wow slideInLeft \" data-wow-delay=\"0.6s\">\n          <p class=\"display\" >MobiLyte also has knowledge and experience in other fields such as Mobile App Development, Web Development, Cloud Computing and so on.</p>\n              <p class=\"display\"> We are offering our customized and innovative solutions to suit the needs of various industries and segments.</p>         \n        </div>\n      \n      \n        <div class=\"col-md-6\">\n          <picture>\n                          <figure class=\"wow shake \" data-wow-delay=\"0.6s\">\n                              <div>\n                                <img class=\"img-fluid\"  src=\"https://www.divalto.com/app/uploads/2014/06/2016-09-14-230x230.png\"/>\n                              </div>\n                          </figure>\n          </picture>\n        </div>\n      </div>\t\n      <div class=\"row padding \">\n        <div class=\"col-12\">\n               <h4 class=\"display-4 text-center wow fadeInUp\" data-wow-delay=\"0.6s\"><strong>Become a partner ! </strong></h4>\n        </div>\n      </div>\n      </div>\n      \n      \n      <div class=\"container-fluid padding\">\n        <div class=\"row welcome text-center padding\">\n          <div class=\"col-12\">\n            <h1 id=\"id1\"  class=\"display-4 zoom wow fadeInLeft\" data-wow-delay=\"0.6s\">Mobility infinity – A powerful ERP system</h1>\n            <h1 id=\"id2\" class=\"display-4 zoom wow fadeInRight\" data-wow-delay=\"0.6s\">for mid - to large-sized companies</h1>\n          </div>\n          <hr>\n          <div class=\"col-12\">\n            <p class=\"lead  wow bounceInDown\" data-wow-delay=\"0.6s\">\n            Mobility infinity is an innovative, simple and integrated ERP (Enterprise Resource Planning) software that helps you <strong>manage your business</strong> and <strong>accelerate your digital transformation</strong>. Completely adapted to your company, Divalto infinity is <strong>the best solution to boost your performance</strong> by simplifying and automating your processes.<br />\n            <br>This ERP software includes all features required to cover your company’s needs :\n            </p>\n          </div>\n        </div>\n        \n      \n      \n        <div class=\"row container mt-3 welcome padding\">\n          <div class=\"col-md-6 col-sm-6 \" id=\"an\">\n          \n            <ul id=\"nolist\" class=\"h3 \">\n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.6s\"><i class=\"fas fa-chevron-right\"></i> TASK CREATION   </li>     \n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.8s\">  <i class=\"fas fa-chevron-right\"></i> TASK DELETION</li>\n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.10s\">  <i class=\"fas fa-chevron-right\"></i> TASK DETAILS UPDATION</li>\n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.12s\">  <i class=\"fas fa-chevron-right\"></i> IDENTIFYING CLIENT</li>\n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.14s\">  <i class=\"fas fa-chevron-right\"></i> TASK HANDLER </li>                               \n                </ul>\n          \n          \n          </div>\n          <div class=\"col-lg-6 col-sm-6 \" >\n           <picture>\n                                              <figure class=\"zoomin wow fadeInRight\" data-wow-delay=\"0.6s\">\n                                                <div ><img style=\"max-width:100%;height:auto;\" src=\"https://www.divalto.com/app/uploads/2014/06/infinity-dashboard.jpg\"  /></div>\n                                              </figure>\n              </picture>\n          </div>\n        </div>\n  \n      \n      \n      \n      </div>\n  \n<div class=\"text-center padding wow bounceInDown\" data-wow-delay=\"0.6s\">\n  \n      <a href=\"https://www.facebook.com/\"><i class=\"fab fa-5x fa-facebook\"></i></a>  &nbsp; &nbsp; &nbsp; &nbsp;\n      <a href=\"https://twitter.com/login?lang=en\"><i class=\"fab fa-5x fa-twitter\"></i></a> &nbsp; &nbsp; &nbsp; &nbsp;\n      <a href=\"https://plus.google.com/discover\"><i class=\"fab fa-5x fa-google-plus-g \"></i></a> &nbsp; &nbsp; &nbsp; &nbsp;\n      <a href=\"https://www.linkedin.com/checkpoint/lg/login\"><i class=\"fab fa-5x fa-linkedin \"></i></a> &nbsp; &nbsp; &nbsp; &nbsp;\n      <a href=\"https://www.instagram.com/accounts/login/?hl=en\"><i class=\"fab fa-5x fa-instagram\"></i></a>\n      \n</div>\n      "
+module.exports = "\n      <div id=\"slides\" class=\"carousel slide mypad\" data-ride=\"carousel\">\n\n          <ul class=\"carousel-indicators\">\n            <li data-target=\"#slides\" data-slide-to=\"0\" class=\"active\"></li>\n      \n            <li data-target=\"#slides\" data-slide-to=\"1\" class=\"active\"></li>\n      \n            <li data-target=\"#slides\" data-slide-to=\"2\" class=\"active\"></li>\n          </ul>\n      \n          <div class=\"carousel-inner mytext\">\n            <div class=\"carousel-item active\">\n                  <img class=\"mySlides\" src=\"https://www.divalto.com/app/uploads/2016/09/slide1.jpg\" >\n                    <div class=\"carousel-caption\">\n                               <h1  class=\"display-4\">ERP powered by</h1><h1> Mobilyte Solutions Private Limited </h1>\n                                    <h3 class=\"display-4\">Our ERP software can easily be adapted to your business</h3>\n                                    <a class=\"btn btn-success\" [routerLink]=\"['/register']\">Register</a>\n                                     <a class=\"btn btn-primary\" [routerLink]=\"['/login']\">Login</a>   \n                    </div> \n            </div>\n            <div class=\"carousel-item \"> \n                  <img class=\"mySlides\" src=\"https://www.divalto.com/app/uploads/2016/09/slide2.jpg\"  >\n                        \n                          <div class=\"carousel-caption\">\n                             <h1  class=\"display-4\">ERP powered by</h1><h1> Mobilyte Solutions Private Limited </h1>\n                                  <h3 class=\"display-4\">Our ERP software can easily be adapted to your business</h3>\n                                    <a class=\"btn btn-success\" [routerLink]=\"['/register']\">Register</a> \n                                     <a class=\"btn btn-primary\" [routerLink]=\"['/login']\">Login</a>\n                        </div> \n            </div>\n              <div class=\"carousel-item \">\n                  <img class=\"mySlides\" src=\"https://www.divalto.com/app/uploads/2016/09/mobilite-commerciaux.jpg\" >\n                          <div class=\"carousel-caption\">\n                                        <h1  class=\"display-4\">ERP powered by</h1><h1>  Mobilyte Solutions Private Limited </h1>\n                                    <h3 class=\"display-4\">Our ERP software can easily be adapted to your business\n                                      </h3>\n                                      <a class=\"btn btn-success\" [routerLink]=\"['/register']\">Register</a> \n                                      <a class=\"btn btn-primary\" [routerLink]=\"['/login']\">Login</a>\n                          </div> \n              </div>\n          </div>\n      \n      </div>\n      \n      \n      <div class=\"container-fluid jumbotron\">\n      <div class=\"row padding\">\n        <div class=\"col-12\">\n               <h4 class=\"display-4 text-center lead wow fadeInUp\" data-wow-delay=\"0.6s\"><strong>Our partnerships abroad are strategic </strong></h4>\n        </div>\n      </div>\n      \n      <div class=\"row padding\">\n        <div class=\"col-md-6 left wow slideInLeft \" data-wow-delay=\"0.6s\">\n          <p class=\"display\" >MobiLyte also has knowledge and experience in other fields such as Mobile App Development, Web Development, Cloud Computing and so on.</p>\n              <p class=\"display\"> We are offering our customized and innovative solutions to suit the needs of various industries and segments.</p>         \n        </div>\n      \n      \n        <div class=\"col-md-6\">\n          <picture>\n                          <figure class=\"wow shake \" data-wow-delay=\"0.6s\">\n                              <div>\n                                <img class=\"img-fluid\"  src=\"https://www.divalto.com/app/uploads/2014/06/2016-09-14-230x230.png\"/>\n                              </div>\n                          </figure>\n          </picture>\n        </div>\n      </div>\t\n      <div class=\"row padding \">\n        <div class=\"col-12\">\n               <h4 class=\"display-4 text-center wow fadeInUp\" data-wow-delay=\"0.6s\"><strong>Become a partner ! </strong></h4>\n        </div>\n      </div>\n      </div>\n      \n      \n      <div class=\"container-fluid padding\">\n        <div class=\"row welcome text-center padding\">\n          <div class=\"col-12\">\n            <h1 id=\"id1\"  class=\"display-4 zoom wow fadeInLeft\" data-wow-delay=\"0.6s\">Mobility infinity – A powerful ERP system</h1>\n            <h1 id=\"id2\" class=\"display-4 zoom wow fadeInRight\" data-wow-delay=\"0.6s\">for mid - to large-sized companies</h1>\n          </div>\n          <hr>\n          <div class=\"col-12\">\n            <p class=\"lead  wow bounceInDown\" data-wow-delay=\"0.6s\">\n            Mobility infinity is an innovative, simple and integrated ERP (Enterprise Resource Planning) software that helps you <strong>manage your business</strong> and <strong>accelerate your digital transformation</strong>. Completely adapted to your company, Divalto infinity is <strong>the best solution to boost your performance</strong> by simplifying and automating your processes.<br />\n            <br>This ERP software includes all features required to cover your company’s needs :\n            </p>\n          </div>\n        </div>\n        \n      \n      \n        <div class=\"row container mt-3 welcome padding\">\n          <div class=\"col-md-6 col-sm-6 \" id=\"an\">\n          \n            <ul id=\"nolist\" class=\"h3 \">\n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.6s\"><i class=\"fas fa-chevron-right\"></i> TASK CREATION   </li>     \n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.8s\">  <i class=\"fas fa-chevron-right\"></i> TASK DELETION</li>\n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.10s\">  <i class=\"fas fa-chevron-right\"></i> TASK DETAILS UPDATION</li>\n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.12s\">  <i class=\"fas fa-chevron-right\"></i> IDENTIFYING CLIENT</li>\n                                   <li class=\"zoom wow fadeInLeft\" data-wow-delay=\"0.14s\">  <i class=\"fas fa-chevron-right\"></i> TASK HANDLER </li>                               \n                </ul>\n          \n          \n          </div>\n          <div class=\"col-lg-6 col-sm-6 \" >\n           <picture>\n                                              <figure class=\"zoomin wow fadeInRight\" data-wow-delay=\"0.6s\">\n                                                <div ><img style=\"max-width:100%;height:auto;\" src=\"https://www.divalto.com/app/uploads/2014/06/infinity-dashboard.jpg\"  /></div>\n                                              </figure>\n              </picture>\n          </div>\n        </div>\n  \n      \n      \n      \n      </div>\n  \n<div class=\"text-center padding wow bounceInDown\" data-wow-delay=\"0.6s\">\n  \n      <a href=\"https://www.facebook.com/\"><i class=\"fab fa-5x fa-facebook\"></i></a>  &nbsp; &nbsp; &nbsp; &nbsp;\n      <a href=\"https://twitter.com/login?lang=en\"><i class=\"fab fa-5x fa-twitter\"></i></a> &nbsp; &nbsp; &nbsp; &nbsp;\n      <a href=\"https://plus.google.com/discover\"><i class=\"fab fa-5x fa-google-plus-g \"></i></a> &nbsp; &nbsp; &nbsp; &nbsp;\n      <a href=\"https://www.linkedin.com/checkpoint/lg/login\"><i class=\"fab fa-5x fa-linkedin \"></i></a> &nbsp; &nbsp; &nbsp; &nbsp;\n      <a href=\"https://www.instagram.com/accounts/login/?hl=en\"><i class=\"fab fa-5x fa-instagram\"></i></a>\n      \n</div>\n      "
 
 /***/ }),
 
@@ -1467,7 +1516,7 @@ module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed
 /***/ 719:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"parallax\">\n    <div class=\"container mt-3 padding\">\n    <br>\n    <br>\n        <div *ngIf=\"user\">\n        <ul class=\"list-group\">\n        <h2 class=\" mytext\">Your Profile - {{user.firstName|uppercase}} </h2>\n      \n     \n        <li class=\"list-group-item\">Firstname : {{user.firstName}}</li>\n        <li class=\"list-group-item\">Lastname : {{user.lastName}}</li>\n        <li class=\"list-group-item\">Email : {{user.email}}</li>\n      </ul>\n    </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"parallax\">\n    <div class=\"container mt-3 padding\">\n    <br>\n    <br>\n          <div *ngIf=\"user\">\n              <ul class=\"list-group\">\n                  <h2 class=\" mytext\">Your Profile - {{user.firstName|uppercase}} </h2>\n                  <li class=\"list-group-item\">Firstname : {{user.firstName}}</li>\n                  <li class=\"list-group-item\">Lastname : {{user.lastName}}</li>\n                  <li class=\"list-group-item\">Email : {{user.email}}</li>\n              </ul>\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -1481,14 +1530,14 @@ module.exports = "\n\n<div class=\"parallax\">\n      <div class=\"container mt-
 /***/ 721:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"parallax\">\n        <div class=\"container mt-3 padding\">\n        \n                <h2 class=\"page-header mytext\" >Reset Password</h2>\n                <form class=\"Reset Password\" (submit)=\"onresetSubmit()\">\n                        \n                        <div class=\"form-group\">\n                        <label class=\"mytext\" for=\"Password\">Password</label>\n                        <input type=\"password\" class=\"form-control\" placeholder=\" Enter the Password\" [(ngModel)]=\"password\" name=\"password\">\n                        </div>\n                        <input class=\"btn btn-lg btn-primary\" type=\"submit\" value=\"Confirm Password\">        \n                </form>\n                \n        </div>\n</div>"
+module.exports = "<div class=\"parallax\">\n        <div class=\"container mt-3 padding\">\n        \n                <h2 class=\"page-header mytext\" >Reset Password</h2>\n                <form class=\"Reset Password\" (submit)=\"onresetSubmit()\">\n                        \n                        <div class=\"form-group\">\n                                <label class=\"mytext\" for=\"Password\">Password</label>\n                                <input type=\"password\" class=\"form-control\" placeholder=\" Enter the Password\" [(ngModel)]=\"password\" name=\"password\">\n                        </div>\n                        <input class=\"btn btn-lg btn-primary\" type=\"submit\" value=\"Confirm Password\">        \n                </form>\n                \n        </div>\n</div>"
 
 /***/ }),
 
 /***/ 722:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container mt-3 padding\">\n\n  <br>\n  <br>\n  <h2>\n    Show Task\n  </h2>\n  <br>\n  <br>\n<table class=\"table table-bordered\">\n  <thead>\n  <tr>\n    <td>TaskId</td>\n    <td>TaskName</td>\n    <td>TaskClientName</td>\n    <td>TaskDescription</td>\n    <td width=\"250\" align=\"center\">Action</td>\n  </tr>\n  </thead>\n  <tbody>\n   <tr  *ngFor=\"let task of tasks\">\n    <td>\t{{task.taskId}}\t </td>\n    <td>\t{{task.taskName}} </td>\n    <td>\t{{task.taskClientName}} </td>\n    <td>\t{{task.taskDesc}} </td>\n    <td width=\"250\"> \n      <a class=\"btn btn-info\" \trouterLink=\"/detailtask/{{task._id}}\">Detail</a> \n      <!-- <a class=\"btn btn-primary\"  \t\trouterLink=\"/edittask/{{task._id}}\">Edit</a> -->\n      <a class=\"btn btn-primary\"  \t\trouterLink=\"/edittask/{{task._id}}\">Edit</a>\n      <a class=\"btn btn-danger\" \t\trouterLink=\"/showtask\"\t\t(click)=\" ondeleteClick(task._id)\" >Delete</a>\n    </td>\n   </tr>\n  </tbody>\n</table>\n <a class=\"btn btn1 btn-primary\"  \t\trouterLink=\"/addtask\">AddTask</a>\n <a class=\"btn btn1 btn-dark\"  \t\trouterLink=\"/dashboard\">GoBack</a>\n</div>\n"
+module.exports = "\n\n<div class=\"container mt-3 padding\">\n  \n  <h2>\n    Show Task\n  </h2>\n\n<table class=\"table table-bordered\">\n    <thead>\n        <tr>\n          <td>TaskId</td>\n          <td>TaskName</td>\n          <td>TaskClientName</td>\n          <td>TaskDescription</td>\n          <td width=\"250\" align=\"center\">Action</td>\n        </tr>\n    </thead>\n  <tbody>\n      <tr  *ngFor=\"let task of tasks\">\n            <td>\t{{task.taskId}}\t </td>\n            <td>\t{{task.taskName}} </td>\n            <td>\t{{task.taskClientName}} </td>\n            <td>\t{{task.taskDesc}} </td>\n            <td width=\"250\"> \n                  <a class=\"btn btn-info\" \trouterLink=\"/detailtask/{{task._id}}\">Detail</a> \n                  <!-- <a class=\"btn btn-primary\"  \t\trouterLink=\"/edittask/{{task._id}}\">Edit</a> -->\n                  <a class=\"btn btn-primary\"  \t\trouterLink=\"/edittask/{{task._id}}\">Edit</a>\n                  <a class=\"btn btn-danger\" \t\trouterLink=\"/showtask\"\t\t(click)=\" ondeleteClick(task._id)\" >Delete</a>\n            </td>\n      </tr>\n  </tbody>\n</table>\n\n <a class=\"btn btn1 btn-primary\"  \t\trouterLink=\"/addtask\">AddTask</a>\n <a class=\"btn btn1 btn-dark\"  \t\trouterLink=\"/dashboard\">GoBack</a>\n</div>\n"
 
 /***/ }),
 

@@ -24,6 +24,7 @@ export class ResetpasswordComponent implements OnInit {
        password: this.password
     }
 
+
     this.authService.resetPasswordUser(user).subscribe(data => {
         if(data.success) {
           this.flashMessage.show('Password Reset Successfull', {cssClass: 'alert-success myclass', timeout: 3000})

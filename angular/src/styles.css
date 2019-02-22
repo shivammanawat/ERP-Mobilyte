@@ -3,6 +3,12 @@
 {
     position: fixed;
     top: 70px;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
+  }
+  .btn
+  {
+    padding: 10px 28px;
+    font-size: 14px;
+    width: 14%;
   }

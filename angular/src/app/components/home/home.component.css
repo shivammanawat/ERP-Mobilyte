@@ -15,9 +15,11 @@ html,body{
 }
 
 .carousel-caption .btn{
-  font-size:60%;
- 
+  padding: 10px 28px;
+  font-size: 14px;
+  width: 14%;
   }
+
 
 .carousel-inner img
 {
@@ -154,16 +156,13 @@ html,body{
 
 @media (max-width: 778px)
 {
-    /* .carousel-caption
-      {
-        position:absolute;
-        top:30%
-      } */
+   
       
-.left
-{
-  padding-left:50px;
-}
+      .left
+      {
+        padding-left:50px;
+      }
+
       .carousel-caption h1
       {
         font-size:120%;
@@ -386,6 +385,3 @@ animation:rotater 20s infinite;
     color:black;
   }
 }
-
-
-/* ================================== */
