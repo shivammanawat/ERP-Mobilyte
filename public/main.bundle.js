@@ -477,7 +477,7 @@ var AddtaskComponent = (function () {
                 _this.router.navigate(['/showtask']);
             }
             else {
-                _this.flashMessage.show('Something Went Wrong', { cssClass: 'alert-danger myclass', timeout: 3000 });
+                _this.flashMessage.show('Task Already Exists', { cssClass: 'alert-danger myclass', timeout: 3000 });
                 _this.router.navigate(['/addtask']);
             }
         });
