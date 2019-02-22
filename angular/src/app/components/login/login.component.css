@@ -8,6 +8,11 @@
     padding-bottom:20px;
     padding-top:5%;
   }
+
+  .mywidth
+  {
+    width: 50%;
+  }
   /* .col-6
   {
     background-color:lightgrey;
