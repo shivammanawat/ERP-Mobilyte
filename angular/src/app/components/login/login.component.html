@@ -19,11 +19,12 @@
                   <input type="password" class="form-control" [(ngModel)]="password" name="password">
               </div>
             </div>
-            <a  [routerLink]="['/forgotpassword']">Forgot Password?</a>  <br><br>
-         <p>Create a New Account ! 
-           <a  [routerLink]="['/register']">Register Here</a><br><br>
+            <input type="submit" class="btn btn-primary" value="Login">
+            <a  [routerLink]="['/forgotpassword']">Forgot Password?</a>  <br>
+            <p>Create a New Account ! 
+           <a  [routerLink]="['/register']">Register Here</a><br>
          </p>            
-           <input type="submit" class="btn btn-primary" value="Login">
+    
           </form>
           
       </div>
