@@ -94,15 +94,3 @@ width: 100px;
 .text-muted{
 	font-size:2vw;
 }
-
-h2::after {
-	content: "";
-	width: 100px;
-	position: absolute;
-	margin: 0 auto;
-	height: 5px;
-	background: #8fbc54;
-	left: 0;
-	right: 0;
-	bottom: -10px;
-}
