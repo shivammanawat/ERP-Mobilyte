@@ -324,7 +324,7 @@ router.post('/addtask', (req, res, next) => {
       res.json({ success: false, msg: ' Failed to Add Task' });
     }
     else {
-      res.json({ success: true, msg: ' Added Task' });
+      res.json({ success: true, msg: '  Task Added' });
     }
   });
 });
