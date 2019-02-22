@@ -6,7 +6,7 @@
     Show Task
   </h2>
 
-<table class="table table-bordered">
+<table class="table table-bordered text-center">
     <thead>
         <tr>
           <td>TaskId</td>
@@ -23,9 +23,9 @@
             <td>	{{task.taskClientName}} </td>
             <td>	{{task.taskDesc}} </td>
             <td width="250"> 
-                  <a class="btn btn-info" 	routerLink="/detailtask/{{task._id}}"><i class="fas fa-info-circle"></i></a> 
-                  <a class="btn btn-primary"  		routerLink="/edittask/{{task._id}}"><i class="fas fa-pencil-alt"></i></a>
-                  <a class="btn btn-danger" 		routerLink="/showtask"		(click)=" ondeleteClick(task._id)" ><i class="fas fa-trash"></i></a>
+                  <a 	routerLink="/detailtask/{{task._id}}"><i class="fas fa-3x info-circle"></i></a> 
+                  <a  routerLink="/edittask/{{task._id}}"><i class="fas fa-3x fa-pencil-alt"></i></a>
+                  <a 	routerLink="/showtask"		(click)=" ondeleteClick(task._id)" ><i class="fas fa-3x fa-trash"></i></a>
             </td>
       </tr>
   </tbody>

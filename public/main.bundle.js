@@ -1440,7 +1440,7 @@ module.exports = "\n    .padding{\n        padding-bottom:20px;\n        padding
 /***/ 707:
 /***/ (function(module, exports) {
 
-module.exports = "\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n   .btn\n  {\n    padding: 10px 28px;\n    font-size: 14px;\n    width: 14%;\n  }"
+module.exports = "\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n   .btn\n  {\n    padding: 10px 28px;\n    font-size: 14px;\n    width: 14%;\n  }\n  .btn i\n  {\n    padding: 10px 28px;\n    font-size: 14px;\n    width: 32%;\n  }\n\n "
 
 /***/ }),
 
@@ -1545,7 +1545,7 @@ module.exports = "<div class=\"parallax\">\n        <div class=\"container mt-3 
 /***/ 722:
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"container mt-3 padding\">\n  \n  <h2>\n    Show Task\n  </h2>\n\n<table class=\"table table-bordered\">\n    <thead>\n        <tr>\n          <td>TaskId</td>\n          <td>TaskName</td>\n          <td>TaskClientName</td>\n          <td>TaskDescription</td>\n          <td width=\"250\" align=\"center\">Action</td>\n        </tr>\n    </thead>\n  <tbody>\n      <tr  *ngFor=\"let task of tasks\">\n            <td>\t{{task.taskId}}\t </td>\n            <td>\t{{task.taskName}} </td>\n            <td>\t{{task.taskClientName}} </td>\n            <td>\t{{task.taskDesc}} </td>\n            <td width=\"250\"> \n                  <a class=\"btn btn-info\" \trouterLink=\"/detailtask/{{task._id}}\"><i class=\"fas fa-info-circle\"></i></a> \n                  <a class=\"btn btn-primary\"  \t\trouterLink=\"/edittask/{{task._id}}\"><i class=\"fas fa-pencil-alt\"></i></a>\n                  <a class=\"btn btn-danger\" \t\trouterLink=\"/showtask\"\t\t(click)=\" ondeleteClick(task._id)\" ><i class=\"fas fa-trash\"></i></a>\n            </td>\n      </tr>\n  </tbody>\n</table>\n\n <a class=\"btn btn1 btn-primary\"  \t\trouterLink=\"/addtask\">AddTask</a>\n <a class=\"btn btn1 btn-dark\"  \t\trouterLink=\"/dashboard\">GoBack</a>\n</div>\n"
+module.exports = "\n\n<div class=\"container mt-3 padding\">\n  \n  <h2>\n    Show Task\n  </h2>\n\n<table class=\"table table-bordered text-center\">\n    <thead>\n        <tr>\n          <td>TaskId</td>\n          <td>TaskName</td>\n          <td>TaskClientName</td>\n          <td>TaskDescription</td>\n          <td width=\"250\" align=\"center\">Action</td>\n        </tr>\n    </thead>\n  <tbody>\n      <tr  *ngFor=\"let task of tasks\">\n            <td>\t{{task.taskId}}\t </td>\n            <td>\t{{task.taskName}} </td>\n            <td>\t{{task.taskClientName}} </td>\n            <td>\t{{task.taskDesc}} </td>\n            <td width=\"250\"> \n                  <a \trouterLink=\"/detailtask/{{task._id}}\"><i class=\"fas fa-3x info-circle\"></i></a> \n                  <a  routerLink=\"/edittask/{{task._id}}\"><i class=\"fas fa-3x fa-pencil-alt\"></i></a>\n                  <a \trouterLink=\"/showtask\"\t\t(click)=\" ondeleteClick(task._id)\" ><i class=\"fas fa-3x fa-trash\"></i></a>\n            </td>\n      </tr>\n  </tbody>\n</table>\n\n <a class=\"btn btn1 btn-primary\"  \t\trouterLink=\"/addtask\">AddTask</a>\n <a class=\"btn btn1 btn-dark\"  \t\trouterLink=\"/dashboard\">GoBack</a>\n</div>\n"
 
 /***/ }),
 
