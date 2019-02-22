@@ -1072,10 +1072,10 @@ var RegisterComponent = (function () {
         // Register user
         this.authService.registerUser(user).subscribe(function (data) {
             if (data.success) {
-                _this.flashMessage.show('Verify Email To Login', { cssClass: 'alert-success myclass', timeout: 3000 });
+                _this.flashMessage.show('Registered!, Verify Email To Login', { cssClass: 'alert-success myclass', timeout: 3000 });
             }
             else {
-                _this.flashMessage.show('Email Already Exists', { cssClass: 'alert-danger myclass', timeout: 3000 });
+                _this.flashMessage.show('User Already Exists', { cssClass: 'alert-danger myclass', timeout: 3000 });
                 _this.router.navigate(['/register']);
             }
         });

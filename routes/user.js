@@ -73,7 +73,6 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 }
 router.post('/register', (req, res, next) => {
   const token = crypto.randomBytes(20).toString('hex');
-
   const today = new Date();
   let newUser = new User({
     firstName: req.body.firstName,
@@ -111,10 +110,10 @@ router.post('/register', (req, res, next) => {
     }
   });
   let mailOptions = {
-    from: '"MEAN APP"',
+    from: '" ERP  " ',
     to: req.body.email,
-    subject: 'Confirmation Email!',
-    text: 'This is confirmation Email.',
+    subject: 'Account Confirmation Email!',
+    text: 'Confirm your email',
     html: msg
   };
   transporter.sendMail(mailOptions, (error, info) => {
@@ -128,7 +127,7 @@ router.post('/register', (req, res, next) => {
 
     User.addUser(newUser, (err, user) => {
       if (err) {
-        res.json({ success: false, msg: ' User already Exist ' });
+        res.json({ success: false, msg: ' Failed to register user ' });
       }
       else {
         res.json({ success: true, msg: '  User Registered' });
