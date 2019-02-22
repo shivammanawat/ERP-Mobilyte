@@ -10,7 +10,12 @@ width: 100px;
   {
     background-color:lightgrey;
   } */
-
+  .btn
+  {
+    padding: 10px 28px;
+    font-size: 14px;
+    width: 14%;
+  }
 
   .parallax { 
     /* The image used */
