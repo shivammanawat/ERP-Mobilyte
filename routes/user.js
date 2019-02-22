@@ -87,13 +87,14 @@ router.post('/register', (req, res, next) => {
   });
   
   const msg = `
-    <p>You have a SignUp Request</p>
+
+  <p>You have a SignUp Request</p>
     <h3>Contact Details</h3>
     <ul>  
-      <li>Email: ${req.body.email} </li>
+      <li> ERP Powered by Mobilyte Solutions Pvt. Ltd. </li>
     </ul>
     <h3>Message</h3>
-    <p>Click <a href="https://erpmobilyte.herokuapp.com/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
+    <p>Click <a href="https://erpmobilyte.herokuapp.com/user/verifyuser/${token}/${req.body.email}"><button class="btn btn-success">activate</a> 
   `;
   //<p>Click <a href="http://localhost:8080/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
 
@@ -215,7 +216,13 @@ router.post('/forgotpassword', (req, res) => {
           user.resetPasswordExpires = Date.now() + 360000;
         user.save();
         const output = `
-              <p>Click <a href="https://erpmobilyte.herokuapp.com/user/reset/${token}/${req.body.email}">here</a> to reset password.</p>
+        <p>You have a Password Reset Request</p>
+        <h3>Contact Details</h3>
+        <ul>  
+          <li> ERP Powered by Mobilyte Solutions Pvt. Ltd. </li>
+        </ul>
+        <h3>Message</h3>
+        <a href="https://erpmobilyte.herokuapp.com/user/reset/${token}/${req.body.email}"><button class="btn btn-success">Reset Password</a> 
           `;
         let transporter = nodemailer.createTransport({
           service: 'Gmail',
@@ -231,7 +238,7 @@ router.post('/forgotpassword', (req, res) => {
           }
         });
         let mailOptions = {
-          from: '"MEAN Demo"',
+          from: '" ERP "',
           to: req.body.email,
           subject: 'Reset Email!',
           text: 'This is Reset Email.',
