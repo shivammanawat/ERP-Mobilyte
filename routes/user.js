@@ -124,7 +124,10 @@ router.post('/register', (req, res, next) => {
 
   });
   console.log("mail sent");
-
+    if(User.active == true)
+    {
+      return res.json({ success: false, msg: ' Already Exists ' });
+    }
     User.addUser(newUser, (err, user) => {
       if (err) {
         res.json({ success: false, msg: ' Failed to register user ' });
@@ -132,7 +135,6 @@ router.post('/register', (req, res, next) => {
       else {
         res.json({ success: true, msg: '  User Registered' });
       }
-
     });
   
 });
