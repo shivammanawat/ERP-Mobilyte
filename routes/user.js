@@ -125,21 +125,17 @@ router.post('/register', (req, res, next) => {
 
   });
   console.log("mail sent");
-  if (newUser.active == "true") {
-    console.log("active is true");
-  }
-  else {
-    User.addUser(newUser, (err, user) => {
 
+    User.addUser(newUser, (err, user) => {
       if (err) {
-        res.json({ success: false, msg: ' User already exist with this email' });
+        res.json({ success: false, msg: ' User already Exist ' });
       }
       else {
-        res.json({ success: true, msg: '  user registered' });
+        res.json({ success: true, msg: '  User Registered' });
       }
 
     });
-  }
+  
 });
 
 router.get('/verifyuser/:token/:email', (req, res, next) => {
