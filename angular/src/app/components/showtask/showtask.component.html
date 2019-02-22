@@ -23,10 +23,9 @@
             <td>	{{task.taskClientName}} </td>
             <td>	{{task.taskDesc}} </td>
             <td width="250"> 
-                  <a class="btn btn-info" 	routerLink="/detailtask/{{task._id}}">Detail</a> 
-                  <!-- <a class="btn btn-primary"  		routerLink="/edittask/{{task._id}}">Edit</a> -->
-                  <a class="btn btn-primary"  		routerLink="/edittask/{{task._id}}">Edit</a>
-                  <a class="btn btn-danger" 		routerLink="/showtask"		(click)=" ondeleteClick(task._id)" >Delete</a>
+                  <a class="btn btn-info" 	routerLink="/detailtask/{{task._id}}"><i class="fas fa-info-circle"></i></a> 
+                  <a class="btn btn-primary"  		routerLink="/edittask/{{task._id}}"><i class="fas fa-pencil-alt"></i></a>
+                  <a class="btn btn-danger" 		routerLink="/showtask"		(click)=" ondeleteClick(task._id)" ><i class="fas fa-trash"></i></a>
             </td>
       </tr>
   </tbody>
