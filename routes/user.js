@@ -86,71 +86,57 @@ router.post('/register', (req, res, next) => {
     created: today
   });
   
-  User.findOne({
-    email: newUser.email,
-  }).then(user => {
-    if (user.active === true) {
-    res.json({ success: false, msg: ' Already Exists ' });
+  const msg = `
+    <p>You have a SignUp Request</p>
+    <h3>Contact Details</h3>
+    <ul>  
+      <li>Email: ${req.body.email} </li>
+    </ul>
+    <h3>Message</h3>
+    <p>Click <a href="https://erpmobilyte.herokuapp.com/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
+  `;
+  //<p>Click <a href="http://localhost:8080/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
+
+  let transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'shivammanawat2526@gmail.com',
+      pass: 'Avani@199725'
+    },
+    tls: {
+      rejectUnauthorized: false
     }
-    else {
-            const msg = `
-            <p>You have a SignUp Request</p>
-            <h3>Contact Details</h3>
-            <ul>  
-              <li>Email: ${req.body.email} </li>
-            </ul>
-            <h3>Message</h3>
-            <p>Click <a href="https://erpmobilyte.herokuapp.com/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
-          `;
-          //<p>Click <a href="http://localhost:8080/user/verifyuser/${token}/${req.body.email}">here</a> to activate.</p>
-
-          let transporter = nodemailer.createTransport({
-            service: 'Gmail',
-            host: 'smtp.gmail.com',
-            port: 465,
-            secure: true,
-            auth: {
-              user: 'shivammanawat2526@gmail.com',
-              pass: 'Avani@199725'
-            },
-            tls: {
-              rejectUnauthorized: false
-            }
-          });
-          let mailOptions = {
-            from: '" ERP  " ',
-            to: req.body.email,
-            subject: 'Account Confirmation Email!',
-            text: 'Confirm your email',
-            html: msg
-          };
-          transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-              return console.log(error);
-            }
-            console.log('Message sent: %s', info.messageId);
-
-          });
-          console.log("mail sent");
-
-
-
-            User.addUser(newUser, (err, user) => {
-              if (err) {
-                res.json({ success: false, msg: ' Failed to register user ' });
-              }
-              else {
-                res.json({ success: true, msg: '  User Registered' });
-              }
-            });
-
+  });
+  let mailOptions = {
+    from: '" ERP  " ',
+    to: req.body.email,
+    subject: 'Account Confirmation Email!',
+    text: 'Confirm your email',
+    html: msg
+  };
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
     }
+    console.log('Message sent: %s', info.messageId);
 
+  });
+  console.log("mail sent");
 
-  }
  
-    
 
+    User.addUser(newUser, (err, user) => {
+      if (err) {
+        res.json({ success: false, msg: ' Failed to register user ' });
+      }
+      else {
+        res.json({ success: true, msg: '  User Registered' });
+      }
+    });
+  
 });
 
 router.get('/verifyuser/:token/:email', (req, res, next) => {
