@@ -112,7 +112,7 @@ router.post('/register', (req, res, next) => {
     }
   });
   let mailOptions = {
-    from: '" ERP  " ',
+    from: ' "ERP" <shivammanawat2526@gmail.com>' ,
     to: req.body.email,
     subject: 'Account Confirmation Email!',
     text: 'Confirm your email',
@@ -238,7 +238,7 @@ router.post('/forgotpassword', (req, res) => {
           }
         });
         let mailOptions = {
-          from: '" ERP "',
+          from: ' "ERP" <shivammanawat2526@gmail.com>',
           to: req.body.email,
           subject: 'Reset Email!',
           text: 'This is Reset Email.',
