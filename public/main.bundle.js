@@ -27,6 +27,14 @@ var ValidateService = (function () {
             return true;
         }
     };
+    ValidateService.prototype.validateLogin = function (user) {
+        if (user.email == undefined || user.password == undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
     ValidateService.prototype.validateEmail = function (email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
@@ -857,7 +865,7 @@ var LoginComponent = (function () {
             password: this.password
         };
         // Required Fields
-        if (!this.validateService.validateRegister(user)) {
+        if (!this.validateService.validateLogin(user)) {
             this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger myclass', timeout: 3000 });
             return false;
         }
@@ -1397,7 +1405,7 @@ module.exports = "html,body{\n  height:100%;\n  width:100%;\n  font-family: 'Pop
 /***/ 702:
 /***/ (function(module, exports) {
 
-module.exports = ".btn\n{\n  padding: 10px 28px;\n  font-size: 14px;\n  width: 14%;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n\n      .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 550px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    \n}\n.mytext\n{\n  color:white;\n}"
+module.exports = ".btn\n{\n  padding: 10px 28px;\n  font-size: 14px;\n  width: 22;\n}\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n\n      .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 550px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    \n}\n.mytext\n{\n  color:white;\n}"
 
 /***/ }),
 
@@ -1418,7 +1426,7 @@ module.exports = "/* .btn\n{\nwidth: 100px;\n} */\n.padding{\n    padding-bottom
 /***/ 705:
 /***/ (function(module, exports) {
 
-module.exports = "/* .btn\n{\nwidth: 100px;\n} */\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n  .btn\n  {\n    padding: 10px 28px;\n    font-size: 14px;\n    width: 14%;\n  }\n\n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 700px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n.mytext\n{\n  color:white;\n}"
+module.exports = "/* .btn\n{\nwidth: 100px;\n} */\n.padding{\n    padding-bottom:20px;\n    padding-top:5%;\n  }\n  /* .col-6\n  {\n    background-color:lightgrey;\n  } */\n  .btn\n  {\n    padding: 10px 28px;\n    font-size: 14px;\n    width: 22%;\n  }\n\n  .parallax { \n    /* The image used */\n    background-image: url(\"https://images.unsplash.com/photo-1489257900339-13e688fb85fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60\");\n  \n    /* Set a specific height */\n    height: 700px; \n  \n    /* Create the parallax scrolling effect */\n    background-attachment: fixed;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n.mytext\n{\n  color:white;\n}"
 
 /***/ }),
 

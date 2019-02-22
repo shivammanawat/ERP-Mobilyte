@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 
 
     // Required Fields
-    if(!this.validateService.validateRegister(user)) {
+    if(!this.validateService.validateLogin(user)) {
       this.flashMessage.show('Please fill in all fields', {cssClass: 'alert-danger myclass', timeout: 3000});
       return false;
     }
